@@ -1,0 +1,896 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Domestic Shipping</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden; /* Prevent horizontal scroll */
+    }
+
+    /* heroes Section */
+   .heroes {
+  background-image: url("https://kuberfurniture.com/wp-content/uploads/2024/09/trackorder-banner.webp");
+  background-repeat: no-repeat;
+  background-size: cover; /* <-- change from cover to contain */
+  background-position: center;
+  
+  padding: 90px 0;
+  width: 100%;
+   min-height: 400px;
+  
+}
+
+    .heroes h1 {
+      font-size: 42px;
+      font-weight: 700;
+      
+    }
+
+    .heroes-features {
+      font-size: 18px;
+      font-weight: 600;
+      margin: 18px 0 28px;
+      color: black;
+    }
+
+    .heroes-features i {
+      margin: 0 10px;
+      color: #A41109;
+    }
+
+    .btn-main {
+      background: #A41109;
+      color: #ffffff;
+      padding: 12px 32px;
+      border-radius: 30px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .btn-main:hover {
+      background: #8d0f08;
+      color: #ffffff;
+    }
+
+    .heroes-img {
+      border-radius: 22px;
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin-bottom: -90px;
+    }
+
+    section img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* Section spacing */
+    section {
+      padding: 70px 0;
+    }
+
+    .section-title {
+      font-weight: 700;
+      color: #07344E;
+      margin-bottom: 20px;
+    }
+
+
+    /* Why Choose */
+    .why li {
+      margin-bottom: 12px;
+      font-weight: 500;
+    }
+
+    /* CTA */
+    .cta {
+      background: #f8f9fa;
+      text-align: center;
+    }
+
+    /* How Domestic Shipping Works */
+    .work-card {
+      padding: 25px 25px;
+      border-radius: 16px;
+      background: #ffffff;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+      height: 100%;
+    }
+
+    .work-card img {
+      width: auto;
+      max-width: 100%;
+      height: 200px;
+      object-fit: contain;
+      margin-bottom: 12px;
+      display: block;
+    }
+
+     .heroes-images {
+      
+      border-top-left-radius: 15px;
+      border-bottom-right-radius: 15px;
+      width: auto;
+      height: 320px;
+      display: block;
+    }
+
+    .heroes-images:hover {
+      
+      border-top-right-radius: 15px;
+      border-bottom-left-radius: 15px;
+      width: auto;
+      height: 320px;
+      display: block;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+    }
+
+
+    .heading1 {
+      font-size: 20px;
+    }
+
+
+
+/* // Need to Save More on Shipping? */
+
+/* Feature Box */
+.feature-box {
+  border: 1px solid #eee;
+  border-radius: 14px;
+  padding: 30px 25px;
+  text-align: start;
+  transition: all 0.3s ease;
+}
+
+.feature-box:hover {
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+  transform: translateY(-4px);
+}
+
+/* Icon */
+.feature-box span {
+  font-size: 40px;
+  display: block;
+  margin-bottom: 15px;
+}
+
+/* Heading */
+.feature-box h4 {
+  margin: 0 0 10px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* Paragraph */
+.feature-box p {
+  margin: 0;
+  font-size: 15px;
+  color: #666;
+  line-height: 1.5;
+}
+
+/* Row */
+.feature-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .feature-row {
+    grid-template-columns: 1fr;
+  }
+
+  .section-title {
+    font-size: 28px;
+  }
+
+  .section-subtitle {
+    font-size: 16px;
+  }
+}
+
+
+/* ************************* Get Shipping Rates in 3 Simple Steps */
+
+.shipping-steps-section {
+  padding: 80px 20px;
+  background: #f9f9f9;
+}
+
+.section-title {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.section-subtitle {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 60px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.steps-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+/* Step Box */
+.step-box {
+  flex: 1;
+  min-width: 250px;
+  background: #fff;
+  padding: 40px 25px;
+  border-radius: 16px;
+  position: relative;
+  text-align: start;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+}
+
+.step-box:hover {
+  transform: translateY(-5px);
+}
+
+/* Different Background Colors */
+.step-1 { background: #e3f2fd; }
+.step-2 { background: #fce4ec; }
+.step-3 { background: #fff3e0; }
+
+/* Step Image */
+.step-image img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  background: #fff;
+  padding: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* Step Arrow */
+.step-arrow {
+  font-size: 40px;
+  font-weight: bold;
+  position: absolute;
+  top: 50%;
+  right: -35px;
+  transform: translateY(-50%);
+  color: #ccc;
+}
+
+.step-box:last-child .step-arrow {
+  display: none;
+}
+
+/* Heading & Paragraph */
+.step-box h4 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.step-box p {
+  font-size: 15px;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .step-arrow {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .steps-wrapper {
+    flex-direction: column;
+    gap: 30px;
+  }
+}
+
+
+/* ===============================
+   Shipment Stages Section
+================================ */
+.shipment-stages {
+  padding: 80px 20px;
+  background: #f9f9f9;
+  text-align: center;
+}
+
+.shipment-stages .section-header h2 {
+  font-size: 32px;
+  color: #07344E;
+  margin-bottom: 10px;
+}
+
+.shipment-stages .section-header h2 span {
+  color: #AB1A0F;
+}
+
+.shipment-stages .section-header p {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 50px;
+}
+
+/* Steps wrapper */
+.stages-wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+/* Single stage */
+.stage {
+  flex: 1 1 180px;
+  max-width: 200px;
+  text-align: center;
+  position: relative;
+}
+
+.stage-icon {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 15px auto;
+}
+
+.stage-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.stage-title {
+  font-size: 18px;
+  color: #07344E;
+  margin-bottom: 8px;
+}
+
+.stage-desc {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.4;
+}
+
+/* Optional connecting line */
+.stage:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  top: 50px; /* half of icon height */
+  right: -50%;
+  width: 100%;
+  height: 2px;
+  background-color: #ddd;
+  z-index: -1;
+}
+
+@media (max-width: 991px) {
+  .stages-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .stage:not(:last-child)::after {
+    display: none;
+  }
+
+  .stage {
+    margin-bottom: 40px;
+  }
+}
+
+/* Connecting dashed lines between steps */
+.stage:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  top: 50%; /* vertically center relative to icon */
+  right: -50%; /* move half of next stage width */
+  width: 100%;
+  height: 2px;
+  border-top: 2px dashed #ccc; /* dashed line */
+  z-index: -1;
+  transform: translateY(-50%);
+}
+
+/* Mobile view: vertical dashed lines */
+@media (max-width: 991px) {
+  .stage:not(:last-child)::after {
+    width: 2px;
+    height: 50px;
+    top: 100%;
+    left: 50%;
+    right: auto;
+    border-top: none;
+    border-left: 2px dashed #ccc;
+    transform: translateX(-50%);
+  }
+}
+/* ***************************************** */
+
+.marquee-section{
+  background:linear-gradient(135deg,#05344F,#A5130C);
+  padding:40px 0;
+  text-align:center;
+}
+
+.marquee-section h2{
+  color:#fff;
+  margin-bottom:30px;
+}
+
+/* marquee box */
+.marquee{
+  overflow:hidden;
+  width:100%;
+  margin:15px 0;
+}
+
+/* moving track */
+.track{
+  display:flex;
+  width:max-content;
+}
+
+/* logos */
+.track img{
+  background:#fff;
+  padding:10px;
+  margin:0 25px;
+  border-radius:8px;
+  width:120px;
+  height:80px;
+  object-fit:contain;
+}
+
+/* animations */
+.marquee.left .track{
+  animation:scrollLeft 15s linear infinite;
+}
+
+.marquee.right .track{
+  animation:scrollRight 15s linear infinite;
+}
+
+@keyframes scrollLeft{
+  from{ transform:translateX(0); }
+  to{ transform:translateX(-50%); }
+}
+
+@keyframes scrollRight{
+  from{ transform:translateX(-50%); }
+  to{ transform:translateX(0); }
+}
+
+/* responsive */
+@media(max-width:768px){
+  .track img{
+    width:90px;
+    height:60px;
+    margin:0 15px;
+  }
+}
+
+
+/* tracking cards */
+
+ .tracking-card {
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    }
+    .loader {
+      display: none;
+    }
+    .timeline li {
+      list-style: none;
+      padding-left: 20px;
+      position: relative;
+      margin-bottom: 12px;
+    }
+    .timeline li::before {
+      content: '';
+      width: 10px;
+      height: 10px;
+      background: #0d6efd;
+      border-radius: 50%;
+      position: absolute;
+      left: 0;
+      top: 6px;
+    }
+    /* tracking card spacing inside hero */
+.tracking-card {
+  background: #fff;
+}
+
+/* mobile responsive */
+@media (max-width: 768px) {
+  .heroes {
+    height: auto;
+    padding: 60px 0;
+  }
+
+  .heroes h1 {
+    font-size: 32px;
+  }
+
+  .tracking-card {
+    margin-top: 20px;
+  }
+}
+
+/* status badge */
+.badge.in-transit {
+  background: #0d6efd;
+}
+.badge.delivered {
+  background: #198754;
+}
+.badge.failed {
+  background: #dc3545;
+}
+
+/* timeline stepper */
+.timeline {
+  padding-left: 0;
+  margin-top: 15px;
+}
+
+.timeline li {
+  list-style: none;
+  padding-left: 30px;
+  position: relative;
+  margin-bottom: 16px;
+  font-weight: 500;
+}
+
+.timeline li::before {
+  content: '';
+  width: 12px;
+  height: 12px;
+  background: #0d6efd;
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  top: 4px;
+}
+
+.timeline li.completed::before {
+  background: #198754;
+}
+
+.timeline li.failed::before {
+  background: #dc3545;
+}
+
+
+
+
+
+
+
+  </style>
+</head>
+<body>
+
+<div id="header"></div>
+
+<!-- heroes Section -->
+<!-- HERO + TRACKING SECTION -->
+<section class="heroes">
+  <div class="container">
+    <div class="row align-items-start">
+
+      <!-- LEFT SIDE CONTENT -->
+      <div class="col-lg-6 col-md-8 col-12">
+
+        <!-- TEXT -->
+        <div class="mb-4">
+          <h1>
+            <span style="color:#A4110A;">Keep Tabs</span> on Your Delivery
+          </h1>
+          <p class="mb-4">
+            Easily monitor your order status in real-time with Hyloship’s tracking tool.
+          </p>
+        </div>
+
+        <!-- TRACKING CARD -->
+        <div class="card tracking-card p-4 position-relative">
+
+          <!-- CLOSE BUTTON -->
+          <button
+            type="button"
+            class="btn-close position-absolute top-0 end-0 m-3"
+            aria-label="Close"
+            onclick="closeTracking()"
+          ></button>
+
+          <h4 class="mb-3">Track Your Shipment</h4>
+
+          <!-- INPUT -->
+          <div class="input-group mb-2">
+            <input
+              type="text"
+              id="awb"
+              class="form-control"
+              placeholder="Airway Bill Number (AWB) *"
+            >
+            <button class="btn btn-main" onclick="trackShipment()">
+              Track
+            </button>
+          </div>
+
+          <!-- ERROR MESSAGE -->
+          <div id="errorMsg" class="alert alert-danger py-2 d-none">
+            ❌ Invalid AWB / Order ID. Please check and try again.
+          </div>
+
+          <!-- LOADER -->
+          <div id="loader" class="text-center my-4 d-none">
+            <div class="spinner-border text-danger"></div>
+            <p class="mt-2">Fetching shipment status...</p>
+          </div>
+
+          <!-- RESULT -->
+          <div id="result" class="mt-4 d-none">
+
+            <p><strong>Courier:</strong> <span id="courier"></span></p>
+
+            <p>
+              <strong>Status:</strong>
+              <span id="statusBadge" class="badge"></span>
+            </p>
+
+            <p><strong>Last Location:</strong> <span id="location"></span></p>
+            <p><strong>Expected Delivery:</strong> <span id="edd"></span></p>
+
+            <!-- TRACKING STEPPER -->
+            <ul class="timeline mt-3" id="history"></ul>
+
+          </div>
+
+        </div>
+        <!-- /TRACKING CARD -->
+
+      </div>
+
+      <!-- RIGHT SIDE EMPTY (BACKGROUND IMAGE VISIBLE) -->
+      <div class="col-lg-6 d-none d-lg-block"></div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- Shipment Stages Section -->
+<section class="shipment-stages">
+  <div class="container">
+    <!-- Heading -->
+    <div class="section-header text-center">
+      <h2>Shipment Stages <span>Simplified</span></h2>
+      <p>Decoding the courier tracking stages for your convenience.</p>
+    </div>
+
+    <!-- Steps -->
+    <div class="stages-wrapper">
+      <!-- Step 1 -->
+      <div class="stage">
+        <div class="stage-icon">
+          <img src="https://cdn-icons-png.flaticon.com/128/11529/11529075.png" alt="Booked">
+        </div>
+        <h3 class="stage-title">Booked</h3>
+        <p class="stage-desc">Your order has been confirmed by the seller</p>
+      </div>
+
+      <!-- Step 2 -->
+      <div class="stage">
+        <div class="stage-icon">
+          <img src="https://cdn-icons-png.flaticon.com/128/17001/17001084.png" alt="Pending Pickup">
+        </div>
+        <h3 class="stage-title">Pending Pickup</h3>
+        <p class="stage-desc">You will be informed upon successful order pickup</p>
+      </div>
+
+      <!-- Step 3 -->
+      <div class="stage">
+        <div class="stage-icon">
+          <img src="https://cdn-icons-png.flaticon.com/128/8633/8633899.png" alt="In Transit">
+        </div>
+        <h3 class="stage-title">In Transit</h3>
+        <p class="stage-desc">Your package is on the way</p>
+      </div>
+
+      <!-- Step 4 -->
+      <div class="stage">
+        <div class="stage-icon">
+          <img src="https://cdn-icons-png.flaticon.com/128/17627/17627470.png" alt="Out for Delivery">
+        </div>
+        <h3 class="stage-title">Out for Delivery</h3>
+        <p class="stage-desc">The delivery partner will deliver your order to your doorstep soon</p>
+      </div>
+
+      <!-- Step 5 -->
+      <div class="stage">
+        <div class="stage-icon">
+          <img src="https://cdn-icons-png.flaticon.com/128/13467/13467009.png" alt="Delivered">
+        </div>
+        <h3 class="stage-title">Delivered</h3>
+        <p class="stage-desc">Your package has been successfully delivered</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- ********************************* -->
+
+
+<section class="marquee-section">
+  <h2>Track Your Shipments Easily</h2>
+   <p style="color: white;" class="section-subtitle">
+      Get live updates from multiple courier partners using HyloShip’s tracking system.
+    </p>
+
+  <!-- LEFT TO RIGHT -->
+  <div class="marquee left">
+    <div class="track">
+      <img src="https://sr-website.shiprocket.in/wp-content/uploads/2024/11/shopify.webp">
+      <img src="https://sr-website.shiprocket.in/wp-content/uploads/2024/11/logo-4.png">
+      <img src="https://sr-website.shiprocket.in/wp-content/uploads/2024/11/integtration-9.png">
+      <img src="https://sr-website.shiprocket.in/wp-content/uploads/2024/11/integtration-8.png">
+      <img src="https://sr-website.shiprocket.in/wp-content/uploads/2024/11/woocommerce.webp">
+      <img src="https://sr-website.shiprocket.in/wp-content/uploads/2024/11/Razorpay.webp">
+
+      <!-- duplicate -->
+      <img src="https://sr-website.shiprocket.in/wp-content/uploads/2024/11/Group-9.png">
+      <img src="https://sr-website.shiprocket.in/wp-content/uploads/2024/11/c1.png">
+      <img src="https://sr-website.shiprocket.in/wp-content/uploads/2024/11/ds.png">
+      <img src="https://sr-website.shiprocket.in/wp-content/uploads/2024/11/c1.png">
+
+      <img src="https://sr-website.shiprocket.in/wp-content/uploads/2024/11/Zoho.png">
+      <img src="https://sr-website.shiprocket.in/wp-content/uploads/2024/11/aramex.webp">
+    </div>
+  </div>
+
+  <!-- RIGHT TO LEFT -->
+  <div class="marquee right">
+    <div class="track">
+      <img src="https://sr-website.shiprocket.in/wp-content/uploads/2024/11/logo-1.png">
+      <img src="https://sr-website.shiprocket.in/wp-content/uploads/2024/11/integtration-9.png">
+      <img src="https://sr-website.shiprocket.in/wp-content/uploads/2024/11/integtration-8.png">
+      <img src="https://sr-website.shiprocket.in/wp-content/uploads/2024/11/bluedart.png">
+      <img src="https://sr-website.shiprocket.in/wp-content/uploads/2024/11/woocommerce.webp">
+      <img src="https://sr-website.shiprocket.in/wp-content/uploads/2024/11/Razorpay.webp">
+
+      <!-- duplicate -->
+      <img src="https://sr-website.shiprocket.in/wp-content/uploads/2024/11/c2.png">
+      <img src="https://sr-website.shiprocket.in/wp-content/uploads/2025/05/Courier-partner-Section.webp">
+      <img src="https://sr-website.shiprocket.in/wp-content/uploads/2024/11/woocommerce.webp">
+      <img src="https://sr-website.shiprocket.in/wp-content/uploads/2024/11/Razorpay.webp">
+      <img src="https://sr-website.shiprocket.in/wp-content/uploads/2024/11/ds.png">
+      <img src="https://sr-website.shiprocket.in/wp-content/uploads/2024/11/c1.png">
+    </div>
+  </div>
+
+</section>
+
+
+
+
+
+
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- FOOTER -->
+<div id="footer"></div>
+
+<script src="script.js"></script>
+<script>
+  fetch("header.html")
+    .then(res => res.text())
+    .then(data => document.getElementById("header").innerHTML = data);
+
+  fetch("footer.html")
+    .then(res => res.text())
+    .then(data => document.getElementById("footer").innerHTML = data);
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const form = document.getElementById("shipping-calc-form");
+    const spinner = document.getElementById("spinner");
+    const result = document.getElementById("shipping-calc-result");
+    const resetBtn = document.getElementById("shipping-calc-reset");
+
+    form.addEventListener("submit", function(e) {
+        e.preventDefault(); // Prevent form submission
+
+        // Show spinner
+        spinner.style.display = "flex";
+        result.style.display = "none";
+
+        // Simulate API calculation delay
+        setTimeout(function() {
+            spinner.style.display = "none";
+            result.style.display = "block";
+        }, 2000); // 2 seconds delay
+    });
+
+    // Reset button handler
+    resetBtn.addEventListener("click", function() {
+        spinner.style.display = "none";
+        result.style.display = "none";
+        form.reset();
+    });
+});
+</script>
+
+<script>
+function trackShipment() {
+  const awb = document.getElementById("awb").value.trim();
+
+  // Hide error first
+  document.getElementById("errorMsg").classList.add("d-none");
+
+  // Basic validation (empty / too short)
+  if (awb === "" || awb.length < 6) {
+    document.getElementById("errorMsg").classList.remove("d-none");
+    return;
+  }
+
+  // Dynamic backend tracking URL
+  const trackingUrl = `https://hyloship.com/admin/tracking/${awb}`;
+
+  // Open backend page (backend decides valid / invalid)
+  window.open(trackingUrl, "_blank");
+}
+</script>
+
+
+<script>
+function closeTracking() {
+  document.getElementById("result").classList.add("d-none");
+  document.getElementById("errorMsg").classList.add("d-none");
+  document.getElementById("awb").value = "";
+}
+</script>
+
+
+
+
+
+
+</body>
+</html>
