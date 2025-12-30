@@ -2,13 +2,12 @@ body {
   background: #f5f5f5;
   font-family: Arial;
 }
-
-
-/* Submenu positioning */
+/* ===============================
+   SUBMENU POSITIONING
+================================ */
 .dropdown-submenu {
   position: relative;
 }
-
 .dropdown-submenu > .dropdown-menu {
   top: 0;
   left: 100%;
@@ -16,47 +15,41 @@ body {
   display: none;
   position: absolute;
 }
-
 /* Hover desktop */
 .dropdown-submenu:hover > .dropdown-menu {
   display: block;
 }
-
 /* Mobile click support */
 .dropdown-menu.show {
   display: block;
 }
-
 /* Optional arrow */
 .dropdown-submenu > a::after {
   float: right;
 }
-
+/* ===============================
+   NAV LIST STYLE
+================================ */
 nav ul {
   display: flex;
-  gap: 20px; /* Adjust as needed */
-  list-style-type: none; /* Remove default bullets */
+  gap: 20px;
+  list-style-type: none;
   padding: 0;
   margin: 0;
   color: #021A62;
 }
-
-
-
 /* ===============================
    MAIN NAVBAR LINKS
 ================================ */
 .navbar-nav .nav-link {
-  color: #04334F !important;     /* default color */
+  color: #04334F !important;
   font-weight: 500;
   transition: color 0.3s ease;
 }
-
 .navbar-nav .nav-link:hover,
 .navbar-nav .nav-link:focus {
-  color: #AB1A0F !important;     /* hover color */
+  color: #AB1A0F !important;
 }
-
 /* ===============================
    DROPDOWN + SUBMENU ITEMS
 ================================ */
@@ -66,22 +59,17 @@ nav ul {
   padding: 8px 15px;
   transition: all 0.3s ease;
 }
-
 .dropdown-menu .dropdown-item:hover,
 .dropdown-menu .dropdown-item:focus {
   color: #AB1A0F;
   background-color: #f5f5f5;
 }
-
-
-
 /* ===============================
    MULTI-LEVEL DROPDOWN POSITION
 ================================ */
 .dropdown-submenu {
   position: relative;
 }
-
 .dropdown-submenu > .dropdown-menu {
   top: 0;
   left: 100%;
@@ -89,35 +77,30 @@ nav ul {
   display: none;
   position: absolute;
 }
-
 .dropdown-submenu:hover > .dropdown-menu {
   display: block;
 }
-
 .dropdown-menu {
   z-index: 2000;
 }
-
 /* ===============================
    DROPDOWN BOX STYLE
 ================================ */
 .dropdown-menu {
   background-color: #ffffff;
-  border-radius: 10px;                 /* box rounded */
+  border-radius: 10px;
   border: none;
   padding: 10px 0;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.12); /* lifted look */
-  transform: translateY(8px);          /* thoda neeche */
+  box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+  transform: translateY(8px);
   opacity: 0;
   transition: all 0.25s ease;
 }
-
 /* Show dropdown smoothly */
 .dropdown-menu.show {
   opacity: 1;
   transform: translateY(0);
 }
-
 /* ===============================
    SUBMENU (RIGHT SIDE BOX)
 ================================ */
@@ -128,14 +111,12 @@ nav ul {
   opacity: 0;
   transition: all 0.25s ease;
 }
-
 /* Hover pe utha hua effect */
 .dropdown-submenu:hover > .dropdown-menu {
   display: block;
   opacity: 1;
   transform: translateX(0);
 }
-
 /* ===============================
    DROPDOWN ITEMS STYLE
 ================================ */
@@ -144,41 +125,31 @@ nav ul {
   border-radius: 6px;
   margin: 2px 8px;
 }
-
-/* Hover pe item bhi thoda lift ho */
 .dropdown-menu .dropdown-item:hover {
   background-color: #f5f5f5;
   transform: translateX(4px);
 }
-
-.abc{
-    margin: 0;
+/* ===============================
+   BACKGROUND CLASS
+================================ */
+.abc {
+  margin: 0;
   font-family: Arial, sans-serif;
   background: url("/images/backgroundimg.jpg") no-repeat center center fixed;
   background-size: cover;
 }
-
-
-
-
-
 /* ===============================
    RESPONSIVE NAVBAR
 ================================ */
-
-/* Tablet & Mobile */
 @media (max-width: 991px) {
-
   /* Navbar menu vertical */
   .navbar-nav {
     margin-top: 15px;
     text-align: left;
   }
-
   .navbar-nav .nav-item {
     padding: 5px 0;
   }
-
   /* Dropdown full width */
   .dropdown-menu {
     position: static !important;
@@ -188,30 +159,61 @@ nav ul {
     border-radius: 0;
     padding-left: 15px;
   }
-
-  /* Submenu full width (no right side) */
+  /* Submenu full width */
   .dropdown-submenu > .dropdown-menu {
     left: 0;
     margin-left: 0;
-    padding-left: 15px;
+    padding-left: 20px;
   }
-
-  /* Remove hover behavior on mobile */
+  /* Disable hover logic on mobile */
   .dropdown-submenu:hover > .dropdown-menu {
     display: none;
   }
-
-  /* Buttons stack vertically */
-  .navbar .d-flex {
+  /* STACK BUTTONS INSIDE COLLAPSE ONLY */
+  .navbar-collapse .d-flex {
     flex-direction: column;
     gap: 10px;
     margin-top: 15px;
   }
-
-  .navbar .btn {
+  .navbar-collapse .btn {
     width: 100%;
   }
 }
+/* ===============================
+   LOGO & TOP RIGHT FIX
+================================ */
+.nav-logo {
+  height: 48px;
+}
+@media (max-width: 991px) {
+  .nav-logo {
+    height: 38px;
+  }
+  /* KEEP SIGNUP + HAMBURGER INLINE */
+  .navbar > .container > .d-flex {
+    flex-direction: row !important;
+    align-items: center !important;
+    gap: 8px;
+    margin-top: 0 !important;
+  }
+  /* ===============================
+   FIX: INVISIBLE DROPDOWN BLOCKING CLICKS
+================================ */
+/* When dropdown is hidden */
+.dropdown-menu {
+  pointer-events: none;
+}
+/* When dropdown is visible */
+.dropdown-menu.show {
+  pointer-events: auto;
+}
+.dropdown-submenu > .dropdown-menu.show {
+  display: block !important;
+}
+}
+
+
+
 
 
 
@@ -245,14 +247,14 @@ nav ul {
   }
 
   .carousel-item h1 {
-    font-size: 20px;
-    text-align: center;
-    margin-bottom: 10px;
+    font-size: 35px;
+    text-align: left;
+    
   }
 
   .carousel-item p {
     font-size: 16px;
-    text-align: center;
+    text-align: left;
     margin-bottom: 15px;
   }
 
@@ -509,6 +511,27 @@ body {
   transition: 0.3s;
 }
 
+@media (max-width: 768px) {
+  .section-title {
+  font-size: 33px;
+  font-weight: 700;
+  text-align: left;
+}
+
+.section-title span {
+  color: #07344E;
+}
+
+.section-subtitle {
+  max-width: 900px;
+  margin: 15px auto 0;
+  color: #555;
+  font-size: 18px;
+  text-align: left;
+}
+
+}
+
 
 /*    section 4  */
 
@@ -738,7 +761,16 @@ body {
 
   .b2b h1{
     font-size: 26px;
+    text-align: center;
   }
+
+    #heavy{
+      text-align: center;
+    }
+    #depend{
+      padding-top: 20px;
+    }
+
 }
 
 
@@ -818,7 +850,7 @@ body {
 /* Mobile Responsive Version */
 @media (max-width: 767px) {
   .timeline::before {
-    left: 20px; /* vertical line left side */
+    left: 10px; /* vertical line left side */
   }
 
   .circle-icon {
@@ -860,10 +892,12 @@ body {
   /* Text adjustments for mobile */
   .timeline-item h5 {
     font-size: 22px; /* smaller heading */
+    padding-left: 25px;
   }
 
   .timeline-item p {
     font-size: 14px; /* smaller paragraph */
+    padding-left: 25px;
   }
 }
 

@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Domestic Shipping</title>
+  <title>Hyloship</title>
+  <link rel="icon" type="image/png" href="/images/a7940b03-4e97-45fa-a1e4-5530317fbb67.png">
 
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -286,6 +287,54 @@
 }
 
 
+/* faq */
+
+/* Container background, border and padding */
+.accordion-container {
+  background-color: #E4EBF5;
+  border-radius: 15px;
+  padding: 50px 20px; /* top-bottom 50px, left-right 20px */
+  max-width: 1300px;
+  margin: auto;
+}
+
+/* Section heading styling */
+.section-header h2 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #07344E;
+
+}
+
+.section-header h2 span {
+  color: #07344E; /* optional accent for span */
+}
+
+.section-header p {
+  font-size: 16px;
+  color: #333;
+}
+
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .accordion-container {
+    padding: 30px 15px;
+  }
+  
+  .section-header h2 {
+    font-size: 26px;
+  }
+  
+  .section-header p {
+    font-size: 14px;
+  }
+}
+
+
+
 
 
 
@@ -426,6 +475,147 @@
       </div>
     </div>
 
+  </div>
+</section>
+
+
+<!-- FAQ -->
+
+<section>
+  <div class="container accordion-container" id="accordionPanelsStayOpenExample">
+    
+    <div class="section-header text-center mb-4">
+      <h2>Frequently Asked Questions</h2>
+    </div>
+
+    <div class="accordion" id="accordionExample">
+      <!-- Item 1 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingOne">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+            1. How many courier partners can I access through Hyloship?
+          </button>
+        </h2>
+        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne">
+          <div class="accordion-body">
+            Hyloship connects you with 25+ national and regional courier partners, so you can choose the best option based on delivery speed, cost, and location.
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 2 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingTwo">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+            2. Can I select a different courier for each shipment?
+          </button>
+        </h2>
+        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo">
+          <div class="accordion-body">
+            Yes! Hyloship lets you pick the courier partner individually for every order, giving you full flexibility.
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 3 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingThree">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+            3. How does having multiple courier options benefit my business?
+          </button>
+        </h2>
+        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree">
+          <div class="accordion-body">
+            With multiple courier choices, you can optimize for faster delivery, lower costs, and better service reliability, ensuring a smoother experience for your customers.
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 4 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingFour">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+            4. Can I ship Cash-on-Delivery (COD) orders?
+          </button>
+        </h2>
+        <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour">
+          <div class="accordion-body">
+            Absolutely. Hyloship supports COD shipments with partnered couriers, making it easy to manage prepaid and COD orders.
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 5 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingFive">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+            5. How is the best courier chosen for an order?
+          </button>
+        </h2>
+        <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive">
+          <div class="accordion-body">
+            Hyloship suggests the most suitable courier based on your package details, delivery location, and service requirements, helping you make an informed choice.
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 6 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingSix">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+            6. Can I track all shipments from one place?
+          </button>
+        </h2>
+        <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix">
+          <div class="accordion-body">
+            Yes. Hyloship provides a centralized dashboard to track all your shipments in real time, regardless of which courier you choose.
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 7 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingSeven">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+            7. What if a courier is unavailable for a certain pin code?
+          </button>
+        </h2>
+        <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven">
+          <div class="accordion-body">
+            If a courier doesn’t serve a particular area, Hyloship will show you alternative partners who can deliver to that location.
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 8 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingSeven">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+            8. Can I integrate Hyloship with my online store?
+          </button>
+        </h2>
+        <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven">
+          <div class="accordion-body">
+            Definitely! Hyloship can be integrated with most e-commerce platforms to streamline order processing, shipment booking, and tracking directly from your store.
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 9 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingSeven">
+          <button  class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+            9. Is there support for returns and exchanges?
+          </button>
+        </h2>
+        <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven">
+          <div class="accordion-body">
+            Yes, Hyloship supports reverse logistics, making it easy to handle returns, replacements, or exchanges through your chosen courier partners.
+          </div>
+        </div>
+      </div>
+
+    </div>
   </div>
 </section>
 
