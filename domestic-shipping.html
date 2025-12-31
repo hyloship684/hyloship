@@ -27,12 +27,26 @@
     .hero {
       background: white;
       color: #07344E;
-      padding: 90px 0;
+      padding-top: 120px;
     }
 
     .hero h1 {
-      font-size: 42px;
+      font-size: 39px;
       font-weight: 700;
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 {
+      font-size: 32px;
+      font-weight: 700;
+    }
+
+    .hero {
+      background: white;
+      color: #07344E;
+      padding-top: 150px;
+    }
+      
     }
 
     .hero-features {
@@ -347,6 +361,11 @@
     }
 
 
+     /* aligns the button and text to left */
+
+
+
+
   </style>
 </head>
 <body>
@@ -609,8 +628,8 @@
 <!-- ctas -->
 <section class="ctas">
   <div class="container">
-    <h2 class="section-title">Ready to Ship Across India?</h2>
-    <p class="mb-4">Start shipping smarter with our trusted domestic shipping solutions.</p>
+    <h2 style="text-align: center;" class="section-title">Ready to Ship Across India?</h2>
+    <p style="text-align: center;" class="mb-4">Start shipping smarter with our trusted domestic shipping solutions.</p>
     <a href="contact-us.html" class="btns-main">Contact Us</a>
   </div>
 </section>
@@ -623,14 +642,40 @@
 
 <script src="script.js"></script>
 <script>
-  fetch("header.html")
-    .then(res => res.text())
-    .then(data => document.getElementById("header").innerHTML = data);
+    // Load Header and Footer dynamically
+    fetch("header.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("header").innerHTML = data;
 
-  fetch("footer.html")
-    .then(res => res.text())
-    .then(data => document.getElementById("footer").innerHTML = data);
-</script>
+        // Hamburger + submenu JS after header is loaded
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('navMenu');
+
+        hamburger.addEventListener('click', () => {
+          navMenu.classList.toggle('active');
+          hamburger.textContent = navMenu.classList.contains('active') ? '✕' : '☰';
+        });
+
+        document.querySelectorAll('.has-submenu').forEach(item => {
+          item.addEventListener('click', function(e) {
+            if (window.innerWidth <= 991) {
+              e.preventDefault();
+              e.stopPropagation();
+              const parent = this.parentElement;
+              [...parent.parentElement.children].forEach(sib => {
+                if (sib !== parent) sib.classList.remove('active');
+              });
+              parent.classList.toggle('active');
+            }
+          });
+        });
+      });
+
+    fetch("footer.html")
+      .then(res => res.text())
+      .then(data => document.getElementById("footer").innerHTML = data);
+  </script>
 
 </body>
 </html>
