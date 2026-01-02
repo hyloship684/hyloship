@@ -33,6 +33,12 @@
     text-align: left;
   }
 
+  .carousel-item h2 {
+    font-size: clamp(26px, 7.5vw, 35px) !important;
+    line-height: 1.15;
+    text-align: left;
+  }
+
   .carousel-item p {
     font-size: clamp(15px, 4.2vw, 16px);
     text-align: left;
@@ -69,6 +75,9 @@
   .carousel-item h1 {
     font-size: 28px;
   }
+  .carousel-item h2 {
+    font-size: 28px;
+  }
 
   .carousel-item p {
     font-size: 18px;
@@ -90,6 +99,10 @@
 .carousel-inner,
 .carousel-item {
   pointer-events: auto;
+}
+
+#rtc{
+  font-size: 39px;
 }
 
 /* Ensure button is always on top */
@@ -489,7 +502,7 @@ body {
   font-weight: 700;
 }
 
-.b2b h1 {
+.b2b h2 {
   font-size: 34px;
   font-weight: 700;
 }
@@ -517,7 +530,7 @@ body {
 
 /* Tablet */
 @media (max-width: 991px) {
-  .b2b h1 {
+  .b2b h2 {
     font-size: 30px;
   }
 }
@@ -538,7 +551,7 @@ body {
     margin-top: 40px;
   }
 
-  .b2b h1 {
+  .b2b h2 {
     font-size: 26px;
     text-align: center;
   }
