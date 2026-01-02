@@ -16,6 +16,13 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 
   <style>
+
+    /* ===== Android / Samsung auto font zoom STOP ===== */
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
     body {
       font-family: 'Segoe UI', sans-serif;
       margin: 0;
@@ -30,7 +37,7 @@
   background-size: cover; /* <-- change from cover to contain */
   background-position: center;
   
-  padding: 150px 0;
+  padding: 90px 0;
   width: 100%;
    min-height: 400px;
   
@@ -40,7 +47,7 @@
   .heroes h1 {
       font-size: 32px;
       font-weight: 700;
-      padding-top: 130px;
+      
       
     }
      
@@ -648,6 +655,60 @@
     font-size: 14px;
   }
 }
+
+/* ===== Mobile font normalization (Samsung S8+ FIX) ===== */
+@media (max-width: 768px) {
+
+  /* Hero title */
+  .heroes h1 {
+    font-size: clamp(26px, 6vw, 32px) !important;
+  }
+
+  /* Hero paragraph */
+  .heroes p {
+    font-size: clamp(14px, 3.5vw, 16px) !important;
+  }
+
+  /* Tracking card heading */
+  .tracking-card h4 {
+    font-size: 18px !important;
+  }
+
+  /* Tracking card text */
+  .tracking-card p,
+  .timeline li {
+    font-size: 14px !important;
+  }
+
+  /* Section titles */
+  .section-header h2,
+  .shipment-stages .section-header h2 {
+    font-size: clamp(22px, 5.5vw, 26px) !important;
+  }
+
+  .section-header p {
+    font-size: 14px !important;
+  }
+
+  /* Stage titles & descriptions */
+  .stage-title {
+    font-size: 16px !important;
+  }
+
+  .stage-desc {
+    font-size: 14px !important;
+  }
+
+  /* FAQ */
+  .accordion-button {
+    font-size: 15px !important;
+  }
+
+  .accordion-body {
+    font-size: 14px !important;
+  }
+}
+
 
 
 

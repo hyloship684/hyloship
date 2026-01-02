@@ -16,6 +16,15 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 
   <style>
+
+    /* ===== Mobile Font Scaling Fix (THIS PAGE ONLY) ===== */
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+
+    
     body {
       font-family: 'Segoe UI', sans-serif;
       margin: 0;
@@ -27,7 +36,7 @@
     .hero {
       background: white;
       color: #07344E;
-      padding-top: 150px;
+      margin-top: -30px;
       margin-bottom: -70px;
     }
 
@@ -449,6 +458,52 @@ integration */
   }
 }
 
+/* ===== Typography Override (Samsung S8+ Fix) ===== */
+
+/* Hero heading */
+.hero h1 {
+  font-size: clamp(28px, 4vw, 39px) !important;
+}
+
+/* Section titles */
+.section-title,
+.section-header h2 {
+  font-size: clamp(28px, 4vw, 39px) !important;
+}
+
+/* Hero paragraph + normal text */
+.hero p,
+p,
+.hero-features,
+.step-text,
+.accordion-body {
+  font-size: clamp(14px, 1.4vw, 16px) !important;
+}
+
+/* Card / small headings */
+.heading1,
+.speed-card h6 {
+  font-size: clamp(16px, 2vw, 18px) !important;
+}
+
+/* Card paragraphs */
+.speed-card p {
+  font-size: clamp(14px, 1.3vw, 15px) !important;
+}
+
+/* Buttons / CTA */
+.quote,
+.order,
+.integrate-btn {
+  font-size: clamp(14px, 1.5vw, 16px) !important;
+}
+
+/* FAQ paragraph */
+.section-header p {
+  font-size: clamp(14px, 1.4vw, 16px) !important;
+}
+
+
 
 
 
@@ -869,7 +924,7 @@ integration */
 <!-- CTA -->
 <section style="background-color: #E4EBF3;" class="cta">
   <div class="container">
-    <h2 class="section-title">Ship Anywhere, Anytime</h2>
+    <h2 style="text-align: center;" class="section-title">Ship Anywhere, Anytime</h2>
     <p class="mb-4">Connect your store with HyloShip and take control of your shipping. Manage orders better, reduce errors, and delight customers with faster deliveries.</p>
     <a href="https://hyloship.com/admin/login" class="quote">Let’s Ship It!</a>
   </div>

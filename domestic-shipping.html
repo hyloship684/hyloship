@@ -16,6 +16,15 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 
   <style>
+
+    /* ===== Android / Samsung font auto-zoom FIX ===== */
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+    
+
     body {
       font-family: 'Segoe UI', sans-serif;
       margin: 0;
@@ -27,7 +36,7 @@
     .hero {
       background: white;
       color: #07344E;
-      padding-top: 120px;
+      
     }
 
     .hero h1 {
@@ -44,7 +53,9 @@
     .hero {
       background: white;
       color: #07344E;
-      padding-top: 150px;
+      padding-top: 60px;
+      margin-top: -20px;
+      
     }
       
     }
@@ -362,6 +373,40 @@
 
 
      /* aligns the button and text to left */
+
+
+     /* ===== Global responsive typography (THIS PAGE ONLY) ===== */
+
+/* Hero heading */
+.hero h1 {
+  font-size: clamp(28px, 4vw, 39px) !important;
+}
+
+/* Section titles */
+.section-title {
+  font-size: clamp(26px, 3.5vw, 36px) !important;
+}
+
+/* Paragraphs */
+p,
+.hero-features,
+.speed-card p,
+.why li {
+  font-size: clamp(14px, 1.4vw, 16px) !important;
+}
+
+/* Small headings / cards */
+.heading1,
+.speed-card h6,
+.feature h5 {
+  font-size: clamp(16px, 2vw, 18px) !important;
+}
+
+/* Buttons */
+.btns-main {
+  font-size: clamp(14px, 1.5vw, 16px) !important;
+}
+
 
 
 

@@ -16,6 +16,13 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 
   <style>
+
+    /* ===== Mobile font auto-zoom fix (THIS PAGE ONLY) ===== */
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
     body {
       font-family: 'Segoe UI', sans-serif;
       margin: 0;
@@ -44,7 +51,7 @@
     .hero {
       background: white;
       color: #07344E;
-      padding-top: 150px;
+      margin-top: -30px;
     }
     }
 
@@ -377,6 +384,52 @@
     font-size: 14px;
   }
 }
+
+/* ===== Typography override for mobile (Samsung S8+ fix) ===== */
+
+/* Hero heading */
+.hero h1 {
+  font-size: clamp(28px, 4vw, 39px) !important;
+}
+
+/* Section titles */
+.section-title,
+.section-header h2 {
+  font-size: clamp(26px, 3.5vw, 39px) !important;
+}
+
+/* Hero features line */
+.hero-features {
+  font-size: clamp(14px, 1.4vw, 18px) !important;
+}
+
+/* Normal paragraphs everywhere */
+p,
+.section-header p,
+.blitz p,
+.speed-card p,
+.accordion-body {
+  font-size: clamp(14px, 1.4vw, 16px) !important;
+}
+
+/* Card / small headings */
+.heading1,
+.speed-card h6,
+.blitz h6 {
+  font-size: clamp(16px, 2vw, 18px) !important;
+}
+
+/* CTA buttons */
+.quote,
+.order {
+  font-size: clamp(14px, 1.5vw, 16px) !important;
+}
+
+/* FAQ accordion buttons */
+.accordion-button {
+  font-size: clamp(14px, 1.4vw, 16px) !important;
+}
+
 
 
 

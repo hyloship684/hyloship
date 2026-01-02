@@ -16,6 +16,13 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 
   <style>
+
+    /* ===== Android / Samsung auto text-zoom FIX ===== */
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
     body {
       font-family: 'Segoe UI', sans-serif;
       margin: 0;
@@ -27,7 +34,7 @@
     .hero {
       background: #DBDBE0;
       color: #07344E;
-      padding-top: 120px;
+      padding-top: 90px;
       margin-bottom: -70px;
     }
 
@@ -45,7 +52,8 @@
     .hero {
       background: #DBDBE0;
       color: #07344E;
-      padding-top: 170px;
+      margin-top: -50px;
+      
       margin-bottom: -70px;
     }
 }
@@ -268,6 +276,39 @@
   }
 }
 
+/* ===== Responsive typography FIX (THIS PAGE ONLY) ===== */
+
+/* Hero main heading */
+.hero h1 {
+  font-size: clamp(28px, 4vw, 39px) !important;
+}
+
+/* Section titles */
+.section-title {
+  font-size: clamp(26px, 3.5vw, 35px) !important;
+}
+
+/* Convert → Retain → Repeat headings */
+.how-it-works h1 {
+  font-size: clamp(22px, 3vw, 30px) !important;
+}
+
+/* Normal paragraph text */
+p,
+.hero-features,
+.feature p {
+  font-size: clamp(14px, 1.4vw, 16px) !important;
+}
+
+/* Feature small headings */
+.feature h5 {
+  font-size: clamp(16px, 2vw, 18px) !important;
+}
+
+/* Buttons */
+.btn-main {
+  font-size: clamp(14px, 1.5vw, 16px) !important;
+}
 
 
 

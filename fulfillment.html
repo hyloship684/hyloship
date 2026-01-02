@@ -16,6 +16,12 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 
   <style>
+    /* ===== Mobile text auto-zoom FIX (Android / Samsung) ===== */
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
     body {
       font-family: 'Segoe UI', sans-serif;
       margin: 0;
@@ -27,7 +33,7 @@
     .hero {
       background: white;
       color: #07344E;
-      padding-top: 120px;
+      
     }
 
     .hero h1 {
@@ -46,7 +52,7 @@
       .hero {
       background: white;
       color: #07344E;
-      padding-top: 150px;
+      margin-top: -30px;
     }
 
     .hero h1 {
@@ -368,6 +374,46 @@
     box-shadow: 0 10px 30px rgba(0,0,0,0.08);
     line-height: 1;             /* text ke height tight rakhe */
 }
+
+/* ===== Global responsive typography (THIS PAGE) ===== */
+
+/* Hero headings */
+.hero h1,
+#tech {
+  font-size: clamp(28px, 4vw, 39px) !important;
+}
+
+/* Section titles */
+.section-title {
+  font-size: clamp(26px, 3.5vw, 39px) !important;
+}
+
+/* Normal paragraphs */
+p,
+.work-info p,
+.speed-card p,
+.why li {
+  font-size: clamp(14px, 1.4vw, 16px) !important;
+}
+
+/* Small headings / cards */
+.headings2,
+.speed-card h6 {
+  font-size: clamp(16px, 2vw, 18px) !important;
+}
+
+/* Hero features (agar future me use ho) */
+.hero-features {
+  font-size: clamp(14px, 1.4vw, 18px) !important;
+}
+
+/* CTA buttons */
+.quote,
+.order,
+.btn-main {
+  font-size: clamp(14px, 1.5vw, 16px) !important;
+}
+
 
 
     
