@@ -1,412 +1,399 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>HyloShip - Seamless eCommerce integrations and order management for marketplaces and online stores</title>
-  <meta name="description" content="HyloShip - Seamless eCommerce integrations and order management for marketplaces and online stores">
-<meta name="keywords" content="HyloShip, eCommerce, Shopify, WooCommerce, Amazon, Magento, shipping, order management">
-<meta name="author" content="HyloShip">
-
-  <link rel="icon" type="image/png" href="/images/a7940b03-4e97-45fa-a1e4-5530317fbb67.png">
-
-  <!-- Bootstrap CSS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
-  <link rel="stylesheet" href="style.css">
-
-  <!-- Bootstrap Icons -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
-
-  <style>
-
-    /* ===== Mobile Font Scaling Fix (THIS PAGE ONLY) ===== */
-html {
-  -webkit-text-size-adjust: 100%;
-  text-size-adjust: 100%;
-}
-
-
-    
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      margin: 0;
-      padding: 0;
-      overflow-x: hidden; /* Prevent horizontal scroll */
-    }
-
-    /* Hero Section */
-    .hero {
-      background: white;
-      color: #07344E;
-      margin-top: -30px;
-      margin-bottom: -70px;
-    }
-
-    .hero h1 {
-      font-size: 39px;
-      font-weight: 700;
-    }
-
-    @media (max-width: 768px) {
-      .hero h1 {
-      font-size: 32px;
-      font-weight: 700;
-    }
-
-    }
-
-    .hero-features {
-      font-size: 18px;
-      font-weight: 600;
-      margin: 18px 0 28px;
-      color: black;
-    }
-
-    .hero-features i {
-      margin: 0 10px;
-      color: #A41109;
-    }
-
-    .quote {
-      display: inline-block;
-      background: #A41109;
-      color: #ffffff;
-      padding: 12px 32px;
-      border-radius: 30px;
-      font-weight: 600;
-      text-decoration: none;
-      transition: all 0.3s ease;
-      margin-top: 20px;
-    }
-
-    .quote:hover {
-      background: #8d0f08;
-      color: #ffffff;
-    }
-
-    .hero-img {
-      border-radius: 22px;
-      max-width: 100%;
-      height: auto;
-      display: block;
-    }
-
-    section img {
-      max-width: 100%;
-      height: auto;
-      display: block;
-    }
-
-    /* Section spacing */
-    section {
-      padding: 70px 0;
-    }
-
-    .section-title {
-      font-weight: 700;
-      color: #07344E;
-      margin-bottom: 20px;
-      font-size: 39px;
-    }
-
-    @media (max-width: 768px) {
-      .section-title {
-      font-weight: 700;
-      color: #07344E;
-      margin-bottom: 20px;
-      font-size: 32px;
-    }
-
-    }
-
-
-    /* Why Choose */
-    .why li {
-      margin-bottom: 12px;
-      font-weight: 500;
-    }
-
-    /* CTA */
-    .cta {
-      background: #f8f9fa;
-      text-align: center;
-    }
-
-    /* How Domestic Shipping Works */
-    .amazons {
-      padding: 25px 15px;
-      border-radius: 16px;
-      background: #E4EBF3;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.06);
-      height: 100%;
-    }
-
-    .amazons img {
-      
-      max-width: 60px;
-      height: 60px;
-      object-fit: contain;
-      margin-bottom: 12px;
-      display: block;
-    }
-
-    .heading1 {
-      font-size: 20px;
-    }
-
-    /* Delivery Speed Options */
-    .speed-timeline {
-  position: relative;
-}
-
-
-
-.speed-card {
-  background: #ffffff;
-  border-radius: 18px;
-  padding: 30px 20px;
-  text-align: center;
-  font-weight: 600;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-  position: relative;
-  z-index: 1;
-  transition: all 0.3s ease;
-}
-
-.speed-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 18px 40px rgba(0,0,0,0.12);
-}
-
-/* Timeline dot */
-.timeline-dot {
-  width: 16px;
-  height: 16px;
-  background: #A41109;
-  border-radius: 50%;
-  position: absolute;
-  top: -22px;
-  left: 50%;
-  transform: translateX(-50%);
-  border: 4px solid #fff;
-}
-
-/* GIF / Icon */
-.speed-icon {
-  width: 60px;
-  height: 60px;
-  margin-bottom: 12px;
-}
-
-.speed-card h6 {
-  font-size: 18px;
-  margin-bottom: 6px;
-  color: #07344E;
-  text-align: start;
-}
-
-.speed-card p {
-  font-size: 14px;
-  font-weight: 500;
-  color: #555;
-  text-align: start;
-}
-
-/* Mobile fix */
-@media (max-width: 768px) {
-  .speed-timeline::before {
-    display: none;
-  }
-
-  .timeline-dot {
-    display: none;
-  }
-}
-
-    
-
- 
-
-  /* ******************************************** */
-
-   /* Container columns background */
-/* Section background split */
-.why-choose-us {
-  background: linear-gradient(to right, #07344E 50%, #F5F5F5 50%);
-  position: relative;
-  overflow: hidden;
-}
-
-/* Left column image */
-.left-column {
-  position: relative;
-}
-
-.overlap-img {
-  width: 120%; /* thodi bahar overlap karne ke liye */
-  max-width: none;
-  display: block;
-  border-radius: 8px;
-  position: relative;
-  left: -15%; /* left se thodi bahar */
-}
-
-/* Image label */
-.why-choose-us .image-label {
-  position: absolute;
-  bottom: 15px;
-  left: 15px;
-  padding: 8px 12px;
-  color: #fff;
-  background-color: #AC150F;
-  border-radius: 5px;
-  font-weight: 500;
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-}
-
-/* Right column content */
-.right-column {
-  position: relative;
-}
-
-/* Feature icons */
-.why-choose-us .feature .icon {
-  width: 45px;
-  height: 45px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #fff;
-  border-radius: 50%;
-  flex-shrink: 0;
-}
-
-.bg-orange {
-  background-color: #AC150F !important;
-}
-
-/* Responsive */
-@media (max-width: 992px) {
-  .why-choose-us {
-    background: #ffffff; /* Mobile par single color */
-  }
-  .overlap-img {
-    width: 100%;
-    left: 0;
-    margin-bottom: 20px;
-  }
-  .right-column {
-    padding: 2rem 1rem;
-  }
-}
-
-/* Starting from just ₹16 per order* */
-
-.order{
-    display: inline-block;      /* block → inline-block: text ke size ke hisaab se width */
-    background: white;
-    color: #07344E;
-    padding: 12px 32px;         /* text ke around padding */
-    border-radius: 15px;
-    font-weight: 600;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-    line-height: 1;             /* text ke height tight rakhe */
-}
-
-/* 
-integration */
-
-/* Integration Section */
-.integration-section {
-    padding: 60px 0;
-    background-color: #f8f9fa;
-}
-
-.integration-section .section-title {
-    font-weight: bold;
-    color: #333;
-}
-
-.steps-col h3 {
-    font-weight: bold;
-    color: #333;
-}
-
-.step-item {
-    cursor: pointer;
-    transition: background-color 0.3s;
-    padding: 15px;
-    border-radius: 8px;
-}
-
-.step-item:hover,
-.step-item.active {
-    background-color: #e9ecef;
-}
-
-.step-circle {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background-color: #fff;
-    border: 3px solid #dc3545;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #dc3545;
-    flex-shrink: 0;
-    margin-right: 20px; /* default for left-aligned steps */
-}
-
-.steps-col .step-item.justify-content-end .step-circle {
-    margin-left: 20px; /* for right-aligned steps */
-    margin-right: 0;
-}
-
-.step-text {
-    font-size: 1.1rem;
-}
-
-.carousel-img {
-    max-height: 500px;
-    object-fit: contain;
-    border-radius: 10px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-}
-
-.integrate-btn {
-    background-color: #dc3545;
-    color: white;
-    padding: 12px 30px;
-    border-radius: 50px;
-    font-weight: bold;
-    margin-top: 30px;
-}
-
-@media (max-width: 992px) {
-    .steps-col {
-        order: 2;
-        margin-top: 40px;
-    }
-    .carousel-col {
-        order: 1;
-    }
-    .steps-col .step-item.justify-content-end .step-circle {
-        margin-left: 0;
-        margin-right: 20px;
-    }
-}
-
-
-/* faq */
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hyloship</title>
+    <link rel="icon" type="image/png" href="/images/a7940b03-4e97-45fa-a1e4-5530317fbb67.png"> <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css"> <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <style>
+        /* ===== Mobile Font Scaling Fix (THIS PAGE ONLY) ===== */
+        html {
+            -webkit-text-size-adjust: 100%;
+            text-size-adjust: 100%;
+        }
+
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            /* Prevent horizontal scroll */
+        }
+
+        /* Hero Section */
+        .hero {
+            background: white;
+            color: #07344E;
+            margin-top: -30px;
+            margin-bottom: -70px;
+        }
+
+        .hero h1 {
+            font-size: 39px;
+            font-weight: 700;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 32px;
+                font-weight: 700;
+            }
+        }
+
+        .hero-features {
+            font-size: 18px;
+            font-weight: 600;
+            margin: 18px 0 28px;
+            color: black;
+        }
+
+        .hero-features i {
+            margin: 0 10px;
+            color: #A41109;
+        }
+
+        .quote {
+            display: inline-block;
+            background: #A41109;
+            color: #ffffff;
+            padding: 12px 32px;
+            border-radius: 30px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            margin-top: 20px;
+        }
+
+        .quote:hover {
+            background: #8d0f08;
+            color: #ffffff;
+        }
+
+        .hero-img {
+            border-radius: 22px;
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        section img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Section spacing */
+        section {
+            padding: 70px 0;
+        }
+
+        .section-title {
+            font-weight: 700;
+            color: #07344E;
+            margin-bottom: 20px;
+            font-size: 39px;
+        }
+
+        @media (max-width: 768px) {
+            .section-title {
+                font-weight: 700;
+                color: #07344E;
+                margin-bottom: 20px;
+                font-size: 32px;
+            }
+        }
+
+        /* Why Choose */
+        .why li {
+            margin-bottom: 12px;
+            font-weight: 500;
+        }
+
+        /* CTA */
+        .cta {
+            background: #f8f9fa;
+            text-align: center;
+        }
+
+        /* How Domestic Shipping Works */
+        .amazons {
+            padding: 25px 15px;
+            border-radius: 16px;
+            background: #E4EBF3;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+            height: 100%;
+        }
+
+        .amazons img {
+            max-width: 60px;
+            height: 60px;
+            object-fit: contain;
+            margin-bottom: 12px;
+            display: block;
+        }
+
+        .heading1 {
+            font-size: 20px;
+        }
+
+        /* Delivery Speed Options */
+        .speed-timeline {
+            position: relative;
+        }
+
+        .speed-card {
+            background: #ffffff;
+            border-radius: 18px;
+            padding: 30px 20px;
+            text-align: center;
+            font-weight: 600;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            position: relative;
+            z-index: 1;
+            transition: all 0.3s ease;
+        }
+
+        .speed-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
+        }
+
+        /* Timeline dot */
+        .timeline-dot {
+            width: 16px;
+            height: 16px;
+            background: #A41109;
+            border-radius: 50%;
+            position: absolute;
+            top: -22px;
+            left: 50%;
+            transform: translateX(-50%);
+            border: 4px solid #fff;
+        }
+
+        /* GIF / Icon */
+        .speed-icon {
+            width: 60px;
+            height: 60px;
+            margin-bottom: 12px;
+        }
+
+        .speed-card h6 {
+            font-size: 18px;
+            margin-bottom: 6px;
+            color: #07344E;
+            text-align: start;
+        }
+
+        .speed-card p {
+            font-size: 14px;
+            font-weight: 500;
+            color: #555;
+            text-align: start;
+        }
+
+        /* Mobile fix */
+        @media (max-width: 768px) {
+            .speed-timeline::before {
+                display: none;
+            }
+
+            .timeline-dot {
+                display: none;
+            }
+        }
+
+        /* ******************************************** */
+        /* Container columns background */
+        /* Section background split */
+        .why-choose-us {
+            background: linear-gradient(to right, #07344E 50%, #F5F5F5 50%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Left column image */
+        .left-column {
+            position: relative;
+        }
+
+        .overlap-img {
+            width: 120%;
+            /* thodi bahar overlap karne ke liye */
+            max-width: none;
+            display: block;
+            border-radius: 8px;
+            position: relative;
+            left: -15%;
+            /* left se thodi bahar */
+        }
+
+        /* Image label */
+        .why-choose-us .image-label {
+            position: absolute;
+            bottom: 15px;
+            left: 15px;
+            padding: 8px 12px;
+            color: #fff;
+            background-color: #AC150F;
+            border-radius: 5px;
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        /* Right column content */
+        .right-column {
+            position: relative;
+        }
+
+        /* Feature icons */
+        .why-choose-us .feature .icon {
+            width: 45px;
+            height: 45px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+
+        .bg-orange {
+            background-color: #AC150F !important;
+        }
+
+        /* Responsive */
+        @media (max-width: 992px) {
+            .why-choose-us {
+                background: #ffffff;
+                /* Mobile par single color */
+            }
+
+            .overlap-img {
+                width: 100%;
+                left: 0;
+                margin-bottom: 20px;
+            }
+
+            .right-column {
+                padding: 2rem 1rem;
+            }
+        }
+
+        /* Starting from just ₹16 per order* */
+        .order {
+            display: inline-block;
+            /* block → inline-block: text ke size ke hisaab se width */
+            background: white;
+            color: #07344E;
+            padding: 12px 32px;
+            /* text ke around padding */
+            border-radius: 15px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            line-height: 1;
+            /* text ke height tight rakhe */
+        }
+
+        /* integration */
+        /* Integration Section */
+        .integration-section {
+            padding: 60px 0;
+            background-color: #f8f9fa;
+        }
+
+        .integration-section .section-title {
+            font-weight: bold;
+            color: #333;
+        }
+
+        .steps-col h3 {
+            font-weight: bold;
+            color: #333;
+        }
+
+        .step-item {
+            cursor: pointer;
+            transition: background-color 0.3s;
+            padding: 15px;
+            border-radius: 8px;
+        }
+
+        .step-item:hover,
+        .step-item.active {
+            background-color: #e9ecef;
+        }
+
+        .step-circle {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: #fff;
+            border: 3px solid #dc3545;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #dc3545;
+            flex-shrink: 0;
+            margin-right: 20px;
+            /* default for left-aligned steps */
+        }
+
+        .steps-col .step-item.justify-content-end .step-circle {
+            margin-left: 20px;
+            /* for right-aligned steps */
+            margin-right: 0;
+        }
+
+        .step-text {
+            font-size: 1.1rem;
+        }
+
+        .carousel-img {
+            max-height: 500px;
+            object-fit: contain;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .integrate-btn {
+            background-color: #dc3545;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-weight: bold;
+            margin-top: 30px;
+        }
+
+        @media (max-width: 992px) {
+            .steps-col {
+                order: 2;
+                margin-top: 40px;
+            }
+
+            .carousel-col {
+                order: 1;
+            }
+
+            .steps-col .step-item.justify-content-end .step-circle {
+                margin-left: 0;
+                margin-right: 20px;
+            }
+        }
+
+        /* faq */
+       /* faq */
 
 /* Container background, border and padding */
 .accordion-container {
@@ -419,22 +406,13 @@ integration */
 
 /* Section heading styling */
 .section-header h2 {
-  font-size: 39px;
-  font-weight: 700;
-  margin-bottom: 10px;
-  color: #07344E;
-
-}
-
-@media (max-width: 768px) {
-  .section-header h2 {
   font-size: 32px;
   font-weight: 700;
   margin-bottom: 10px;
   color: #07344E;
 
 }
-}
+
 
 .section-header h2 span {
   color: #07344E; /* optional accent for span */
@@ -444,8 +422,6 @@ integration */
   font-size: 16px;
   color: #333;
 }
-
-
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
@@ -461,487 +437,304 @@ integration */
     font-size: 14px;
   }
 }
-
-/* ===== Typography Override (Samsung S8+ Fix) ===== */
-
-/* Hero heading */
-.hero h1 {
-  font-size: clamp(28px, 4vw, 39px) !important;
-}
-
-/* Section titles */
-.section-title,
-.section-header h2 {
-  font-size: clamp(28px, 4vw, 39px) !important;
-}
-
-/* Hero paragraph + normal text */
-.hero p,
-p,
-.hero-features,
-.step-text,
-.accordion-body {
-  font-size: clamp(14px, 1.4vw, 16px) !important;
-}
-
-/* Card / small headings */
-.heading1,
-.speed-card h6 {
-  font-size: clamp(16px, 2vw, 18px) !important;
-}
-
-/* Card paragraphs */
-.speed-card p {
-  font-size: clamp(14px, 1.3vw, 15px) !important;
-}
-
-/* Buttons / CTA */
-.quote,
-.order,
-.integrate-btn {
-  font-size: clamp(14px, 1.5vw, 16px) !important;
-}
-
-/* FAQ paragraph */
-.section-header p {
-  font-size: clamp(14px, 1.4vw, 16px) !important;
-}
-
-
-
-
-
-
-
-  </style>
-</head>
-<body>
-
-<div id="header"></div>
-
-<!-- Hero Section -->
-<section style="background-color: #E4EBF3;" class="hero">
-  <div class="container">
-    <div class="row align-items-center">
-
-      <!-- Left Content -->
-      <div class="col-lg-6 col-md-6 col-12 text-start text-md-start">
-        <h1>Seamless eCommerce Integrations with <span style="color: #8D0F08;">HyloShip </span></h1>
-
-        <p class="mb-4">
-          Manage all your orders from one dashboard—no hopping between tabs, no messy setups. Just connect your store and start shipping.
-        </p>
-        
- <a href="https://hyloship.com/admin/login" class="quote">Get a Quote</a>
-      </div>
-
-      <!-- Right Image -->
-      <div class="col-lg-6 col-md-6 col-12 text-center mt-4 mt-md-0">
-        <img 
-          src="/images/be52e847-324e-4167-b0ed-5d2749648401.png" 
-          alt="Domestic Shipping"
-          class="img-fluid hero-img"
-        >
-      </div>
-
-    </div>
-  </div>
-</section>
-
-
-
-<!-- How Domestic Shipping Works -->
-<section class="how-it-works bg-white">
-  <div class="container">
-    <h2 class="section-title text-center mb-5">Connect Your Favorite <span style="color: #8D0F08;"> Sales Channels </span> </h2>
-
-    <!-- First Row -->
-    <div class="row g-4 text-start">
-      <div class="col-6 col-md-4">
-        <div class="amazons">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Amazon_icon.svg/2048px-Amazon_icon.svg.png" alt="Create Shipment">
-          <h6 class="heading1">Amazon</h6>
-          <p>Sell on India’s top marketplace effortlessly. HyloShip helps you fulfill orders quickly, manage returns smoothly, and track shipments with ease, using our network of trusted courier partners.</p>
-        </div>
-      </div>
-
-      <div class="col-6 col-md-4">
-        <div class="amazons">
-          <img src="https://cdn-icons-png.flaticon.com/512/5968/5968919.png" alt="Pickup Scheduled">
-          <h6 class="heading1">Shopify</h6>
-          <p>Link your Shopify store with a single click. Automatically sync orders, reduce dispatch time, manage returns seamlessly, and scale your operations without friction.</p>
-        </div>
-      </div>
-
-      <div class="col-6 col-md-4">
-        <div class="amazons">
-          <img src="https://cmscritic.com/ms-content/uploads/2023/08/woocommerce-product-logo.png" alt="Pickup Scheduled">
-          <h6 class="heading1">WooCommerce</h6>
-          <p>Sync WooCommerce orders for faster dispatches and simplified returns. One dashboard, zero chaos—built for growing businesses.</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- Second Row -->
-    <div class="row g-4 text-start mt-3">
-      <div class="col-6 col-md-6">
-        <div class="amazons">
-          <img src="https://cdn.iconscout.com/icon/free/png-256/free-magento-logo-icon-svg-download-png-3030040.png" alt="Create Shipment">
-          <h6 class="heading1">Magento</h6>
-          <p>Connect Magento or Magento 2 stores in minutes and manage all orders, shipments, and returns in one place. Save time, reduce errors, and accelerate growth.</p>
-        </div>
-      </div>
-
-      <div class="col-6 col-md-6">
-        <div class="amazons">
-          <img src="https://play-lh.googleusercontent.com/S6Owq4f972wD9qQpcdI8T3ycCfrZ8BbLD2rs4nQmkI58O7QMAO_mAfXV98z3RjjxmwWl=w240-h480-rw" alt="Pickup Scheduled">
-          <h6 class="heading1">EasyEcom</h6>
-          <p>Link your EasyEcom account to sync orders in real time. Simplify multichannel operations and scale smoothly without backend confusion.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-
-<!-- Delivery Speed Options -->
-<section class="bg-light py-6">
-  <div class="container">
-    <h2 class="section-title text-center mb-5">Why Integrate Your Store with HyloShip?</h2>
-
-    <div class="speed-timeline">
-      <div class="row g-4 justify-content-start">
-
-        <div class="col-md-3 col-6">
-          <div class="speed-card">
-            
-            <img src="https://cdn-icons-png.flaticon.com/128/1481/1481625.png" alt="Standard Delivery" class="speed-icon">
-            <h6>Streamlined Order Management</h6>
-            <p>Automatically pull orders from multiple stores, reducing errors and speeding up fulfillment.</p>
-          </div>
-        </div>
-
-        <div class="col-md-3 col-6">
-          <div class="speed-card">
-            
-            <img src="https://cdn-icons-png.flaticon.com/128/18407/18407695.png" alt="Express Delivery" class="speed-icon">
-            <h6>Multi-channel Growth</h6>
-            <p>Manage orders from your website, marketplaces, and social platforms without adding operational headaches.</p>
-          </div>
-        </div>
-
-        <div class="col-md-3 col-6">
-          <div class="speed-card">
-            
-            <img src="https://cdn-icons-png.flaticon.com/128/609/609361.png" alt="Same Day Delivery" class="speed-icon">
-            <h6>Faster Shipping & Delivery</h6>
-            <p>Pre-filled shipping details and automated processing mean quicker dispatch and happier customers.</p>
-          </div>
-        </div>
-
-        <div class="col-md-3 col-6">
-          <div class="speed-card">
-            
-            <img src="https://cdn-icons-png.flaticon.com/128/3649/3649466.png" alt="B2B Bulk" class="speed-icon">
-            <h6>Order Cancellation Sync</h6>
-            <p>Canceled online? It’s canceled in HyloShip automatically—no extra steps.</p>
-          </div>
-        </div>
-
-      </div>
-
-      <div style="margin-top: 20px;" class="row g-4 justify-content-start">
-
-        <div class="col-md-3 col-6">
-          <div class="speed-card">
-            
-            <img src="https://cdn-icons-png.flaticon.com/128/10927/10927184.png" alt="Standard Delivery" class="speed-icon">
-            <h6>Bundle & Combo Management</h6>
-            <p>Selling products in packs? Keep everything synced effortlessly.</p>
-          </div>
-        </div>
-
-        <div class="col-md-3 col-6">
-          <div class="speed-card">
-            
-            <img src="https://cdn-icons-png.flaticon.com/128/11153/11153363.png" alt="Express Delivery" class="speed-icon">
-            <h6>Easy Returns</h6>
-            <p>Handle returns efficiently without juggling multiple systems.</p>
-          </div>
-        </div>
-
-        <div class="col-md-3 col-6">
-          <div class="speed-card">
-            
-            <img src="https://cdn-icons-png.flaticon.com/128/7176/7176657.png" alt="Same Day Delivery" class="speed-icon">
-            <h6>One-Click Invoices & Labels</h6>
-            <p>Download invoices and shipping labels for all stores at once. No manual work.</p>
-          </div>
-        </div>
-
-        <div class="col-md-3 col-6">
-          <div class="speed-card">
-            
-            <img src="https://cdn-icons-png.flaticon.com/128/9857/9857996.png" alt="B2B Bulk" class="speed-icon">
-            <h6>Secure Data Transfer</h6>
-            <p>All order, payment, and shipping information is encrypted for safety.</p>
-          </div>
-        </div>
-
-      </div>
-
-      <div style="margin-top: 20px;" class="row g-4 justify-content-start">
-
-        <div class="col-md-3 col-6">
-          <div class="speed-card">
-            
-            <img src="https://cdn-icons-png.flaticon.com/128/13079/13079949.png" alt="Standard Delivery" class="speed-icon">
-            <h6>Data-Driven Decisions</h6>
-            <p>Centralized analytics help identify trends, fix gaps, and scale operations confidently.</p>
-          </div>
-        </div>
-
-        <div class="col-md-9 col-12">
-  <div class="speed-card d-flex align-items-center justify-content-between">
-    <!-- Text on the left -->
-    <div class="speed-text">
-      <h6>Ready to Upgrade Your Shipping?</h6>
-      <p>Experience automated, intelligent workflows powered by HyloShip.</p>
-      
-    </div>
-    <!-- Image on the right -->
-    <div class="speed-image">
-      <img style="width: auto; height: 200px;" src="https://img.freepik.com/premium-vector/eco-friendly-bag-logo-illustration-design_409025-815.jpg?ga=GA1.1.1831796848.1751140297&semt=ais_hybrid&w=740&q=80" alt="Express Delivery" class="speed-icon">
-    </div>
-  </div>
-</div>
-  
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<!-- integration  -->/
-
-
-<section class="integration-section">
-    <div class="container">
-        <h2 class="section-title text-center mb-5">How to Connect Your Store</h2>
-
-        <!-- Row 1: Shopping Platforms -->
-        <div class="row align-items-center mb-5">
-            <div class="col-lg-5 steps-col">
-                <h3 class="text-start mb-4 fw-bold text-dark">For Shopping Platforms</h3>
-                <div class="step-item active d-flex align-items-center" data-slide-to="0" data-carousel="shoppingCarousel">
-                    <div class="step-circle">01</div>
-                    <div class="step-text">Log in to your HyloShip dashboard and go to Settings > Channels</div>
-                </div>
-                <div class="step-item d-flex align-items-center mt-4" data-slide-to="1" data-carousel="shoppingCarousel">
-                    <div class="step-circle">02</div>
-                    <div class="step-text">Click Add New Channel</div>
-                </div>
-                <div class="step-item d-flex align-items-center mt-4" data-slide-to="2" data-carousel="shoppingCarousel">
-                    <div class="step-circle">03</div>
-                    <div class="step-text">Select your store, follow the instructions, and start syncing orders</div>
-                </div>
-                <div class="text-start">
-                    <a href="https://hyloship.com/admin/login" class="quote">Integrate Now</a>
-                </div>
-            </div>
-
-            <div class="col-lg-7 carousel-col">
-                <div id="shoppingCarousel" class="carousel slide" data-bs-ride="false" data-bs-interval="false">
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img src="/images/Screenshot 2025-12-24 111918.png" class="d-block w-100 carousel-img" alt="Step 1">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="/images/Screenshot 2025-12-29 120430.png" class="d-block w-100 carousel-img" alt="Step 2">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="/images/Screenshot 2025-12-29 120908.png" class="d-block w-100 carousel-img" alt="Step 3">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Row 2: API Integration -->
-        <div class="row align-items-center">
-            <div class="col-lg-7 carousel-col">
-                <div id="apiCarousel" class="carousel slide" data-bs-ride="false" data-bs-interval="false">
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img src="/images/Screenshot 2025-12-29 121627.png" class="d-block w-100 carousel-img" alt="Step 1">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="/images/Screenshot 2025-12-29 121715.png" class="d-block w-100 carousel-img" alt="Step 2">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="/images/Screenshot 2025-12-29 121850.png" class="d-block w-100 carousel-img" alt="Step 3">
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-5 steps-col">
-                <h3 class="text-start mb-4 fw-bold text-dark">For Order Create</h3>
-                <div class="step-item active d-flex align-items-center justify-content-start" data-slide-to="0" data-carousel="apiCarousel">
-                   <div class="step-circle">01</div>
-                    <div class="step-text text-start">Go to Orders section from the dashboard</div>
-                    
-                </div>
-                <div class="step-item d-flex align-items-center justify-content-start mt-4" data-slide-to="1" data-carousel="apiCarousel">
-                   <div class="step-circle">02</div>
-                    <div class="step-text text-start">Click on Create New Order and fill in shipment details</div>
-                    
-                </div>
-                <div class="step-item d-flex align-items-center justify-content-start mt-4" data-slide-to="2" data-carousel="apiCarousel">
-                  <div class="step-circle">03</div>
-                    <div class="step-text text-start">Place your order and start shipping seamlessly</div>
-                    
-                </div>
-                <div class="text-start">
-                    <a href="https://hyloship.com/admin/login" class="quote">Integrate Now</a>
-                </div>
-            </div>
-        </div>
-
-    </div>
-</section>
-
-<!-- FAQ -->
-
-<section>
-  <div class="container accordion-container" id="accordionPanelsStayOpenExample">
-    
-    <div class="section-header text-center mb-4">
-      <h2>Frequently Asked Questions</h2>
-    </div>
-
-    <div class="accordion" id="accordionExample">
-      <!-- Item 1 -->
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="headingOne">
-          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-            1. How long does integration take?
-          </button>
-        </h2>
-        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne">
-          <div class="accordion-body">
-            Connecting your store with Hyloship is quick and easy—usually just a few minutes. With a single click, your orders can start syncing immediately.
-          </div>
-        </div>
-      </div>
-
-      <!-- Item 2 -->
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="headingTwo">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-            2. Which eCommerce platforms are supported?
-          </button>
-        </h2>
-        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo">
-          <div class="accordion-body">
-            Hyloship works with a wide range of popular eCommerce platforms, making it easy to integrate and manage your orders seamlessly.
-          </div>
-        </div>
-      </div>
-
-      <!-- Item 3 -->
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="headingThree">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-            3. Will my orders sync automatically?
-          </button>
-        </h2>
-        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree">
-          <div class="accordion-body">
-            Yes! Once connected, your orders sync in real time, so you can manage shipping without manual updates.
-          </div>
-        </div>
-      </div>
-
-      <!-- Item 4 -->
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="headingFour">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-            4. Do I need technical assistance for setup?
-          </button>
-        </h2>
-        <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour">
-          <div class="accordion-body">
-            No technical expertise is required. Hyloship is designed for a simple, user-friendly setup process.
-          </div>
-        </div>
-      </div>
-
-      <!-- Item 5 -->
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="headingFive">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-            5. Can I manage shipping directly from the dashboard?
-          </button>
-        </h2>
-        <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive">
-          <div class="accordion-body">
-            Absolutely. Hyloship’s dashboard allows you to handle all shipping tasks—booking, tracking, and updates—conveniently in one place.
-          </div>
-        </div>
-      </div>
-
-      <!-- Item 6 -->
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="headingSix">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-            6. What if I need to cancel an order?
-          </button>
-        </h2>
-        <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix">
-          <div class="accordion-body">
-            Hyloship lets you cancel orders before they are picked up by the courier, giving you full control over your shipments.
-          </div>
-        </div>
-      </div>
-
-      <!-- Item 7 -->
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="headingSeven">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
-            7. Will tracking information be shared with customers?
-          </button>
-        </h2>
-        <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven">
-          <div class="accordion-body">
-            Yes. Hyloship automatically updates your customers with tracking details, keeping them informed throughout the delivery process.
-          </div>
-        </div>
-      </div>
-
      
-    </div>
-  </div>
-</section>
 
-<!-- CTA -->
-<section style="background-color: #E4EBF3;" class="cta">
-  <div class="container">
-    <h2 style="text-align: center;" class="section-title">Ship Anywhere, Anytime</h2>
-    <p class="mb-4">Connect your store with HyloShip and take control of your shipping. Manage orders better, reduce errors, and delight customers with faster deliveries.</p>
-    <a href="https://hyloship.com/admin/login" class="quote">Let’s Ship It!</a>
-  </div>
-</section>
+        /* ===== Typography Override (Samsung S8+ Fix) ===== */
+        /* Hero heading */
+        .hero h1 {
+            font-size: clamp(28px, 4vw, 39px) !important;
+        }
 
-<!-- Bootstrap JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+        /* Section titles */
+        .section-title,
+        .section-header h2 {
+            font-size: clamp(28px, 4vw, 39px) !important;
+        }
 
-<!-- FOOTER -->
-<div id="footer"></div>
+        /* Hero paragraph + normal text */
+        .hero p,
+        p,
+        .hero-features,
+        .step-text,
+        .accordion-body {
+            font-size: clamp(14px, 1.4vw, 16px) !important;
+        }
 
-<script src="script.js"></script>
-<script>
+        /* Card / small headings */
+        .heading1,
+        .speed-card h6 {
+            font-size: clamp(16px, 2vw, 18px) !important;
+        }
+
+        /* Card paragraphs */
+        .speed-card p {
+            font-size: clamp(14px, 1.3vw, 15px) !important;
+        }
+
+        /* Buttons / CTA */
+        .quote,
+        .order,
+        .integrate-btn {
+            font-size: clamp(14px, 1.5vw, 16px) !important;
+        }
+
+        /* FAQ paragraph */
+        .section-header p {
+            font-size: clamp(14px, 1.4vw, 16px) !important;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="header"></div> <!-- Hero Section -->
+    <section style="background-color: #E4EBF3;" class="hero">
+        <div class="container">
+            <div class="row align-items-center"> <!-- Left Content -->
+                <div class="col-lg-6 col-md-6 col-12 text-start text-md-start">
+                    <h1>Seamless eCommerce Integrations with <span style="color: #8D0F08;">HyloShip </span></h1>
+                    <p class="mb-4"> Manage all your orders from one dashboard—no hopping between tabs, no messy setups. Just connect your store and start shipping. </p> <a href="https://hyloship.com/admin/login" class="quote">Get a Quote</a>
+                </div> <!-- Right Image -->
+                <div class="col-lg-6 col-md-6 col-12 text-center mt-4 mt-md-0"> <img src="/images/be52e847-324e-4167-b0ed-5d2749648401.png" alt="Domestic Shipping" class="img-fluid hero-img"> </div>
+            </div>
+        </div>
+    </section> <!-- How Domestic Shipping Works -->
+    <section class="how-it-works bg-white">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">Connect Your Favorite <span style="color: #8D0F08;"> Sales Channels </span> </h2> <!-- First Row -->
+            <div class="row g-4 text-start">
+                <div class="col-6 col-md-4">
+                    <div class="amazons"> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Amazon_icon.svg/2048px-Amazon_icon.svg.png" alt="Create Shipment">
+                        <h6 class="heading1">Amazon</h6>
+                        <p>Sell on India’s top marketplace effortlessly. HyloShip helps you fulfill orders quickly, manage returns smoothly, and track shipments with ease, using our network of trusted courier partners.</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4">
+                    <div class="amazons"> <img src="https://cdn-icons-png.flaticon.com/512/5968/5968919.png" alt="Pickup Scheduled">
+                        <h6 class="heading1">Shopify</h6>
+                        <p>Link your Shopify store with a single click. Automatically sync orders, reduce dispatch time, manage returns seamlessly, and scale your operations without friction.</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4">
+                    <div class="amazons"> <img src="https://cmscritic.com/ms-content/uploads/2023/08/woocommerce-product-logo.png" alt="Pickup Scheduled">
+                        <h6 class="heading1">WooCommerce</h6>
+                        <p>Sync WooCommerce orders for faster dispatches and simplified returns. One dashboard, zero chaos—built for growing businesses.</p>
+                    </div>
+                </div>
+            </div> <!-- Second Row -->
+            <div class="row g-4 text-start mt-3">
+                <div class="col-6 col-md-6">
+                    <div class="amazons"> <img src="https://cdn.iconscout.com/icon/free/png-256/free-magento-logo-icon-svg-download-png-3030040.png" alt="Create Shipment">
+                        <h6 class="heading1">Magento</h6>
+                        <p>Connect Magento or Magento 2 stores in minutes and manage all orders, shipments, and returns in one place. Save time, reduce errors, and accelerate growth.</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-6">
+                    <div class="amazons"> <img src="https://play-lh.googleusercontent.com/S6Owq4f972wD9qQpcdI8T3ycCfrZ8BbLD2rs4nQmkI58O7QMAO_mAfXV98z3RjjxmwWl=w240-h480-rw" alt="Pickup Scheduled">
+                        <h6 class="heading1">EasyEcom</h6>
+                        <p>Link your EasyEcom account to sync orders in real time. Simplify multichannel operations and scale smoothly without backend confusion.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> <!-- Delivery Speed Options -->
+    <section class="bg-light py-6">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">Why Integrate Your Store with HyloShip?</h2>
+            <div class="speed-timeline">
+                <div class="row g-4 justify-content-start">
+                    <div class="col-md-3 col-6">
+                        <div class="speed-card"> <img src="https://cdn-icons-png.flaticon.com/128/1481/1481625.png" alt="Standard Delivery" class="speed-icon">
+                            <h6>Streamlined Order Management</h6>
+                            <p>Automatically pull orders from multiple stores, reducing errors and speeding up fulfillment.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-6">
+                        <div class="speed-card"> <img src="https://cdn-icons-png.flaticon.com/128/18407/18407695.png" alt="Express Delivery" class="speed-icon">
+                            <h6>Multi-channel Growth</h6>
+                            <p>Manage orders from your website, marketplaces, and social platforms without adding operational headaches.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-6">
+                        <div class="speed-card"> <img src="https://cdn-icons-png.flaticon.com/128/609/609361.png" alt="Same Day Delivery" class="speed-icon">
+                            <h6>Faster Shipping & Delivery</h6>
+                            <p>Pre-filled shipping details and automated processing mean quicker dispatch and happier customers.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-6">
+                        <div class="speed-card"> <img src="https://cdn-icons-png.flaticon.com/128/3649/3649466.png" alt="B2B Bulk" class="speed-icon">
+                            <h6>Order Cancellation Sync</h6>
+                            <p>Canceled online? It’s canceled in HyloShip automatically—no extra steps.</p>
+                        </div>
+                    </div>
+                </div>
+                <div style="margin-top: 20px;" class="row g-4 justify-content-start">
+                    <div class="col-md-3 col-6">
+                        <div class="speed-card"> <img src="https://cdn-icons-png.flaticon.com/128/10927/10927184.png" alt="Standard Delivery" class="speed-icon">
+                            <h6>Bundle & Combo Management</h6>
+                            <p>Selling products in packs? Keep everything synced effortlessly.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-6">
+                        <div class="speed-card"> <img src="https://cdn-icons-png.flaticon.com/128/11153/11153363.png" alt="Express Delivery" class="speed-icon">
+                            <h6>Easy Returns</h6>
+                            <p>Handle returns efficiently without juggling multiple systems.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-6">
+                        <div class="speed-card"> <img src="https://cdn-icons-png.flaticon.com/128/7176/7176657.png" alt="Same Day Delivery" class="speed-icon">
+                            <h6>One-Click Invoices & Labels</h6>
+                            <p>Download invoices and shipping labels for all stores at once. No manual work.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-6">
+                        <div class="speed-card"> <img src="https://cdn-icons-png.flaticon.com/128/9857/9857996.png" alt="B2B Bulk" class="speed-icon">
+                            <h6>Secure Data Transfer</h6>
+                            <p>All order, payment, and shipping information is encrypted for safety.</p>
+                        </div>
+                    </div>
+                </div>
+                <div style="margin-top: 20px;" class="row g-4 justify-content-start">
+                    <div class="col-md-3 col-6">
+                        <div class="speed-card"> <img src="https://cdn-icons-png.flaticon.com/128/13079/13079949.png" alt="Standard Delivery" class="speed-icon">
+                            <h6>Data-Driven Decisions</h6>
+                            <p>Centralized analytics help identify trends, fix gaps, and scale operations confidently.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-9 col-12">
+                        <div class="speed-card d-flex align-items-center justify-content-between"> <!-- Text on the left -->
+                            <div class="speed-text">
+                                <h6>Ready to Upgrade Your Shipping?</h6>
+                                <p>Experience automated, intelligent workflows powered by HyloShip.</p>
+                            </div> <!-- Image on the right -->
+                            <div class="speed-image"> <img style="width: auto; height: 200px;" src="https://img.freepik.com/premium-vector/eco-friendly-bag-logo-illustration-design_409025-815.jpg?ga=GA1.1.1831796848.1751140297&semt=ais_hybrid&w=740&q=80" alt="Express Delivery" class="speed-icon"> </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> <!-- integration -->/ <section class="integration-section">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">How to Connect Your Store</h2> <!-- Row 1: Shopping Platforms -->
+            <div class="row align-items-center mb-5">
+                <div class="col-lg-5 steps-col">
+                    <h3 class="text-start mb-4 fw-bold text-dark">For Shopping Platforms</h3>
+                    <div class="step-item active d-flex align-items-center" data-slide-to="0" data-carousel="shoppingCarousel">
+                        <div class="step-circle">01</div>
+                        <div class="step-text">Log in to your HyloShip dashboard and go to Settings > Channels</div>
+                    </div>
+                    <div class="step-item d-flex align-items-center mt-4" data-slide-to="1" data-carousel="shoppingCarousel">
+                        <div class="step-circle">02</div>
+                        <div class="step-text">Click Add New Channel</div>
+                    </div>
+                    <div class="step-item d-flex align-items-center mt-4" data-slide-to="2" data-carousel="shoppingCarousel">
+                        <div class="step-circle">03</div>
+                        <div class="step-text">Select your store, follow the instructions, and start syncing orders</div>
+                    </div>
+                    <div class="text-start"> <a href="https://hyloship.com/admin/login" class="quote">Integrate Now</a> </div>
+                </div>
+                <div class="col-lg-7 carousel-col">
+                    <div id="shoppingCarousel" class="carousel slide" data-bs-ride="false" data-bs-interval="false">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active"> <img src="/images/Screenshot 2025-12-24 111918.png" class="d-block w-100 carousel-img" alt="Step 1"> </div>
+                            <div class="carousel-item"> <img src="/images/Screenshot 2025-12-29 120430.png" class="d-block w-100 carousel-img" alt="Step 2"> </div>
+                            <div class="carousel-item"> <img src="/images/Screenshot 2025-12-29 120908.png" class="d-block w-100 carousel-img" alt="Step 3"> </div>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- Row 2: API Integration -->
+            <div class="row align-items-center">
+                <div class="col-lg-7 carousel-col">
+                    <div id="apiCarousel" class="carousel slide" data-bs-ride="false" data-bs-interval="false">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active"> <img src="/images/Screenshot 2025-12-29 121627.png" class="d-block w-100 carousel-img" alt="Step 1"> </div>
+                            <div class="carousel-item"> <img src="/images/Screenshot 2025-12-29 121715.png" class="d-block w-100 carousel-img" alt="Step 2"> </div>
+                            <div class="carousel-item"> <img src="/images/Screenshot 2025-12-29 121850.png" class="d-block w-100 carousel-img" alt="Step 3"> </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5 steps-col">
+                    <h3 class="text-start mb-4 fw-bold text-dark">For Order Create</h3>
+                    <div class="step-item active d-flex align-items-center justify-content-start" data-slide-to="0" data-carousel="apiCarousel">
+                        <div class="step-circle">01</div>
+                        <div class="step-text text-start">Go to Orders section from the dashboard</div>
+                    </div>
+                    <div class="step-item d-flex align-items-center justify-content-start mt-4" data-slide-to="1" data-carousel="apiCarousel">
+                        <div class="step-circle">02</div>
+                        <div class="step-text text-start">Click on Create New Order and fill in shipment details</div>
+                    </div>
+                    <div class="step-item d-flex align-items-center justify-content-start mt-4" data-slide-to="2" data-carousel="apiCarousel">
+                        <div class="step-circle">03</div>
+                        <div class="step-text text-start">Place your order and start shipping seamlessly</div>
+                    </div>
+                    <div class="text-start"> <a href="https://hyloship.com/admin/login" class="quote">Integrate Now</a> </div>
+                </div>
+            </div>
+        </div>
+    </section> <!-- FAQ -->
+    <section>
+        <div class="container accordion-container" id="accordionPanelsStayOpenExample">
+            <div class="section-header text-center mb-4">
+                <h2>Frequently Asked Questions</h2>
+            </div>
+            <div class="accordion" id="accordionExample"> <!-- Item 1 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne"> <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"> 1. How long does integration take? </button> </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne">
+                        <div class="accordion-body"> Connecting your store with Hyloship is quick and easy—usually just a few minutes. With a single click, your orders can start syncing immediately. </div>
+                    </div>
+                </div> <!-- Item 2 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwo"> <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo"> 2. Which eCommerce platforms are supported? </button> </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo">
+                        <div class="accordion-body"> Hyloship works with a wide range of popular eCommerce platforms, making it easy to integrate and manage your orders seamlessly. </div>
+                    </div>
+                </div> <!-- Item 3 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingThree"> <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree"> 3. Will my orders sync automatically? </button> </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree">
+                        <div class="accordion-body"> Yes! Once connected, your orders sync in real time, so you can manage shipping without manual updates. </div>
+                    </div>
+                </div> <!-- Item 4 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingFour"> <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour"> 4. Do I need technical assistance for setup? </button> </h2>
+                    <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour">
+                        <div class="accordion-body"> No technical expertise is required. Hyloship is designed for a simple, user-friendly setup process. </div>
+                    </div>
+                </div> <!-- Item 5 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingFive"> <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive"> 5. Can I manage shipping directly from the dashboard? </button> </h2>
+                    <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive">
+                        <div class="accordion-body"> Absolutely. Hyloship’s dashboard allows you to handle all shipping tasks—booking, tracking, and updates—conveniently in one place. </div>
+                    </div>
+                </div> <!-- Item 6 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingSix"> <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix"> 6. What if I need to cancel an order? </button> </h2>
+                    <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix">
+                        <div class="accordion-body"> Hyloship lets you cancel orders before they are picked up by the courier, giving you full control over your shipments. </div>
+                    </div>
+                </div> <!-- Item 7 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingSeven"> <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven"> 7. Will tracking information be shared with customers? </button> </h2>
+                    <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven">
+                        <div class="accordion-body"> Yes. Hyloship automatically updates your customers with tracking details, keeping them informed throughout the delivery process. </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+     <!-- CTA -->
+    <section style="background-color: #E4EBF3;" class="cta">
+        <div class="container">
+            <h2 style="text-align: center;" class="section-title">Ship Anywhere, Anytime</h2>
+            <p class="mb-4">Connect your store with HyloShip and take control of your shipping. Manage orders better, reduce errors, and delight customers with faster deliveries.</p> <a href="https://hyloship.com/admin/login" class="quote">Let’s Ship It!</a>
+        </div>
+    </section> <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script> <!-- FOOTER -->
+    <div id="footer"></div>
+    <script src="script.js"></script>
+    <script>
     // Load Header and Footer dynamically
     fetch("header.html")
       .then(res => res.text())
@@ -976,49 +769,46 @@ p,
       .then(res => res.text())
       .then(data => document.getElementById("footer").innerHTML = data);
   </script>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "How long does integration take?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Connecting your store with Hyloship is quick and easy..."
-      }
-    },
-    ...
-  ]
-}
-</script>
-
-<script>
-document.querySelectorAll('.step-item').forEach(item => {
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+  document.querySelectorAll('.step-item').forEach(item => {
     item.addEventListener('click', function () {
-        const slideTo = this.getAttribute('data-slide-to');
-        const carouselId = this.getAttribute('data-carousel');
-        const carousel = new bootstrap.Carousel(document.getElementById(carouselId));
-        carousel.to(slideTo);
+      const slideTo = this.getAttribute('data-slide-to');
+      const carouselId = this.getAttribute('data-carousel');
 
-        // Highlight active step for the correct section
-        document.querySelectorAll(`[data-carousel="${carouselId}"]`).forEach(i => i.classList.remove('active'));
-        this.classList.add('active');
+      const carousel = new bootstrap.Carousel(
+        document.getElementById(carouselId)
+      );
+
+      carousel.to(slideTo);
+
+      // Highlight active step for the correct section
+      document
+        .querySelectorAll(`[data-carousel="${carouselId}"]`)
+        .forEach(i => i.classList.remove('active'));
+
+      this.classList.add('active');
     });
-});
+  });
 
-// Sync carousel change with active step highlight
-['shoppingCarousel', 'apiCarousel'].forEach(id => {
+  // Sync carousel change with active step highlight
+  ['shoppingCarousel', 'apiCarousel'].forEach(id => {
     const carouselEl = document.getElementById(id);
+
     carouselEl.addEventListener('slid.bs.carousel', function (e) {
-        const activeIndex = e.to;
-        document.querySelectorAll(`[data-carousel="${id}"]`).forEach(i => i.classList.remove('active'));
-        document.querySelectorAll(`[data-carousel="${id}"]`)[activeIndex].classList.add('active');
+      const activeIndex = e.to;
+
+      document
+        .querySelectorAll(`[data-carousel="${id}"]`)
+        .forEach(i => i.classList.remove('active'));
+
+      document
+        .querySelectorAll(`[data-carousel="${id}"]`)
+        [activeIndex].classList.add('active');
     });
-});
+  });
 </script>
+
 </body>
+
 </html>
