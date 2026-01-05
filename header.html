@@ -5,362 +5,345 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>HyloShip - Fast B2C & B2B Shipping, Warehousing & Fulfillment Services</title>
   <meta name="description" content="HyloShip provides fast, reliable B2C and B2B shipping solutions, warehousing & fulfillment services. Recharge your wallet and enjoy fast deliveries across India.">
-<meta name="keywords" content="HyloShip, B2C Shipping, B2B Shipping, Warehousing, Fulfillment, Same-Day Delivery, Next-Day Delivery, Track Order">
-<meta name="robots" content="index, follow">
-<link rel="canonical" href="https://hyloship.com/">
-
-
+  <meta name="keywords" content="HyloShip, B2C Shipping, B2B Shipping, Warehousing, Fulfillment, Same-Day Delivery, Next-Day Delivery, Track Order">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://hyloship.com/">
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-body {
-  font-family: Arial, sans-serif;
-  background: #f5f5f5;
-  margin-top: 0;           /* ← changed */
-  padding-top: 130px;      /* ← added: total height of marquee + navbar */
-}
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+      margin-top: 0;
+      padding-top: 130px;
+    }
 
-/* =========================
-   MARQUEE
-========================= */
-.fixed-marquee {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 60px;            /* explicit height */
-  z-index: 1050;
-  padding: 12px 0;
-  font-size: 1rem;
-  background: #07344E;
-  color: white;
-  overflow: hidden;
-  white-space: nowrap;
-  display: flex;
-  align-items: center;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
+    /* =========================
+       MARQUEE
+    ========================= */
+    .fixed-marquee {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 60px;
+      z-index: 1050;
+      padding: 12px 0;
+      font-size: 1rem;
+      background: #07344E;
+      color: white;
+      overflow: hidden;
+      white-space: nowrap;
+      display: flex;
+      align-items: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
 
-.marquee-wrapper {
-  display: inline-flex;
-  animation: marquee 20s linear infinite;
-}
+    .marquee-wrapper {
+      display: inline-flex;
+      animation: marquee 20s linear infinite;
+    }
 
-.marquee-content {
-  padding-right: 50px;
-}
+    .marquee-content {
+      padding-right: 50px;
+    }
 
-@keyframes marquee {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
-}
+    @keyframes marquee {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
 
-/* =========================
-   NAVBAR
-========================= */
-.navbar {
-  background: white;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
-  position: fixed;
-  width: 100%;
-  left: 0;
-  top: 60px;               /* exactly below marquee */
-  z-index: 1000;
-}
+    /* =========================
+       NAVBAR
+    ========================= */
+    .navbar {
+      background: white;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+      position: fixed;
+      width: 100%;
+      left: 0;
+      top: 60px;
+      z-index: 1000;
+    }
 
-.nav-container {
-  width: 100%;
-  padding: 0 32px;
-  height: 70px;
-  display: flex;
-  align-items: center;
-  position: relative;
-}
+    .nav-container {
+      width: 100%;
+      padding: 0 32px;
+      height: 70px;
+      display: flex;
+      align-items: center;
+      position: relative;
+    }
 
-/* Logo left */
-.logo {
-  margin-right: auto;
-}
+    .logo {
+      margin-right: auto;
+    }
 
-.logo img {
-  height: 48px;
-}
+    .logo img {
+      height: 48px;
+    }
 
-/* Menu center */
-.nav-menu {
-  display: flex;
-  gap: 40px;
-  align-items: center;
-  margin: 0 auto;
-}
+    .nav-menu {
+      display: flex;
+      gap: 40px;
+      align-items: center;
+      margin: 0 auto;
+    }
 
-/* Menu items */
-.nav-item {
-  position: relative;
-  color: #04334F;
-  font-weight: 500;
-  font-size: 1.05rem;
-  text-decoration: none;
-  transition: color 0.3s ease;
-  cursor: pointer;
-  line-height: 1;
-}
+    .nav-item {
+      position: relative;
+      color: #04334F;
+      font-weight: 500;
+      font-size: 1.05rem;
+      text-decoration: none;
+      transition: color 0.3s ease;
+      cursor: pointer;
+      line-height: 1;
+    }
 
-.nav-item:hover {
-  color: #AB1A0F;
-}
+    .nav-item:hover {
+      color: #AB1A0F;
+    }
 
-.has-submenu::after {
-  content: " ▼";
-  font-size: 0.7rem;
-  margin-left: 6px;
-  opacity: 0.7;
-}
+    .has-submenu::after {
+      content: " ▼";
+      font-size: 0.7rem;
+      margin-left: 6px;
+      opacity: 0.7;
+    }
 
-/* =========================
-   DROPDOWNS
-========================= */
-.dropdown {
-  position: relative;
-}
+    .dropdown {
+      position: relative;
+    }
 
-.dropdown-content {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background: white;
-  min-width: 260px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.12);
-  border-radius: 10px;
-  padding: 12px 0;
-  z-index: 20;
-}
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: white;
+      min-width: 260px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+      border-radius: 10px;
+      padding: 12px 0;
+      z-index: 20;
+    }
 
-/* Hover safe zone */
-.dropdown::before {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 100%;
-  height: 12px;
-  background: transparent;
-}
+    .dropdown::before {
+      content: "";
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      height: 12px;
+      background: transparent;
+    }
 
-.dropdown:hover > .dropdown-content,
-.dropdown-content:hover {
-  display: block;
-}
+    .dropdown:hover > .dropdown-content,
+    .dropdown-content:hover {
+      display: block;
+    }
 
-/* Sub dropdown (right side) */
-.sub-dropdown {
-  position: relative;
-}
+    .sub-dropdown {
+      position: relative;
+    }
 
-.sub-dropdown > .dropdown-content {
-  left: 100%;
-  top: -10px;
-  min-width: 250px;
-}
+    .sub-dropdown > .dropdown-content {
+      left: 100%;
+      top: -10px;
+      min-width: 250px;
+    }
 
-.sub-dropdown::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -12px;
-  width: 12px;
-  height: 100%;
-  background: transparent;
-}
+    .sub-dropdown::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -12px;
+      width: 12px;
+      height: 100%;
+      background: transparent;
+    }
 
-.dropdown-item {
-  display: block;
-  padding: 10px 24px;
-  color: #04334F;
-  text-decoration: none;
-  font-size: 0.95rem;
-  position: relative;
-}
+    .dropdown-item {
+      display: block;
+      padding: 10px 24px;
+      color: #04334F;
+      text-decoration: none;
+      font-size: 0.95rem;
+      position: relative;
+    }
 
-.dropdown-item:hover {
-  background: #f5f5f5;
-  color: #AB1A0F;
-}
+    .dropdown-item:hover {
+      background: #f5f5f5;
+      color: #AB1A0F;
+    }
 
-.sub-dropdown > .dropdown-item::after {
-  content: " ▶";
-  position: absolute;
-  right: 16px;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 0.8rem;
-  opacity: 0.7;
-}
+    .sub-dropdown > .dropdown-item::after {
+      content: " ▶";
+      position: absolute;
+      right: 16px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 0.8rem;
+      opacity: 0.7;
+    }
 
-/* =========================
-   AUTH BUTTONS (RIGHT)
-========================= */
-.auth-buttons {
-  margin-left: auto;
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
+    .auth-buttons {
+      margin-left: auto;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
 
-.btn-auth {
-  padding: 8px 20px;
-  border-radius: 6px;
-  font-weight: 500;
-  font-size: 0.95rem;
-  cursor: pointer;
-  transition: 0.2s;
-  text-decoration: none !important;
-}
+    .btn-auth {
+      padding: 8px 20px;
+      border-radius: 6px;
+      font-weight: 500;
+      font-size: 0.95rem;
+      cursor: pointer;
+      transition: 0.2s;
+      text-decoration: none !important;
+    }
 
-.btn-login {
-  background: transparent;
-  border: 1px solid #AB1A0F;
-  color: #AB1A0F;
-}
-.btn-login:hover {
-  background: #fff5f5;
-}
+    .btn-login {
+      background: transparent;
+      border: 1px solid #AB1A0F;
+      color: #AB1A0F;
+    }
+    .btn-login:hover {
+      background: #fff5f5;
+    }
 
-.btn-signup {
-  background: #AB1A0F;
-  color: white;
-  border: none;
-}
-.btn-signup:hover {
-  background: #8c150a;
-}
+    .btn-signup {
+      background: #AB1A0F;
+      color: white;
+      border: none;
+    }
+    .btn-signup:hover {
+      background: #8c150a;
+    }
 
-/* =========================
-   HAMBURGER
-========================= */
-.hamburger {
-  display: none;
-  font-size: 1.9rem;
-  cursor: pointer;
-  color: #04334F;
-}
+    .hamburger {
+      display: none;
+      font-size: 1.9rem;
+      cursor: pointer;
+      color: #04334F;
+    }
 
-/* =========================
-   MOBILE
-========================= */
-.mobile-right {
-  display: none;
-}
+    .mobile-right {
+      display: none;
+    }
 
-@media (max-width: 991px) {
-  body {
-    padding-top: 140px;           /* little more space on mobile */
-  }
+    @media (max-width: 991px) {
+      body {
+        padding-top: 140px;
+      }
 
-  .fixed-marquee {
-    height: 56px;
-    font-size: 0.82rem;
-    padding: 10px 0;
-    line-height: 1.4;
-  }
+      .fixed-marquee {
+        height: 56px;
+        font-size: 0.82rem;
+        padding: 10px 0;
+        line-height: 1.4;
+      }
 
-  .marquee-wrapper {
-    animation: marquee 28s linear infinite; /* slower on mobile */
-  }
+      .marquee-wrapper {
+        animation: marquee 28s linear infinite;
+      }
 
-  .navbar {
-    top: 56px;
-    height: 64px;
-  }
+      .navbar {
+        top: 56px;
+        height: 70px;                 /* ← Adjusted for better proportion */
+      }
 
-  .nav-container {
-    padding: 0 16px;
-    height: 64px;
-  }
+      .nav-container {
+        padding: 0 16px;
+        height: 70px;                 /* ← Match with navbar height */
+      }
 
-  .nav-menu {
-    position: absolute;
-    top: 64px;
-    left: 0;
-    width: 100%;
-    background: white;
-    flex-direction: column;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-    align-items: flex-start;
-    display: none;
-  }
+      .nav-menu {
+        position: absolute;
+        top: 60px;                   /* ← 56px marquee + 70px navbar = 126px (main fix) */
+        left: 0;
+        width: 100%;
+        background: white;
+        flex-direction: column;
+        box-shadow: 0 8px 20px rgba(255, 255, 255, 0.1);
+        align-items: flex-start;
+        display: none;
+        padding-top: 30px;            /* ← Little breathing space at top of menu */
+        padding-bottom: 20px;         /* ← Space at bottom */
+      }
 
-  .nav-menu.active {
-    display: flex !important;
-  }
+      .nav-menu.active {
+        display: flex !important;
+      }
 
-  .nav-menu .nav-item,
-  .nav-menu .dropdown-item {
-    padding: 16px 30px;
-    border-bottom: 1px solid #eee;
-    width: 100%;
-    text-align: left;
-    justify-content: flex-start;
-  }
+      .nav-menu .nav-item,
+      .nav-menu .dropdown-item {
+        padding: 18px 30px;           /* ← More comfortable spacing */
+        border-bottom: 1px solid #eee;
+        width: 100%;
+        text-align: left;
+        justify-content: flex-start;
+      }
 
-  .dropdown-content {
-    position: static;
-    box-shadow: none;
-    background: #ffffff;
-    padding: 0;
-  }
+      .dropdown-content {
+        position: static;
+        box-shadow: none;
+        background: #ffffff;
+        padding: 0;
+      }
 
-  .sub-dropdown .dropdown-content {
-    padding-left: 40px;
-  }
+      .sub-dropdown .dropdown-content {
+        padding-left: 40px;
+      }
 
-  .auth-buttons {
-    display: none;
-  }
+      .auth-buttons {
+        display: none;
+      }
 
-  .mobile-right {
-    display: flex !important;
-    align-items: center;
-    gap: 12px;
-  }
+      .mobile-right {
+        display: flex !important;
+        align-items: center;
+        gap: 12px;
+      }
 
-  .hamburger {
-    display: block !important;
-    position: relative;
-    z-index: 1051;
-  }
+      .hamburger {
+        display: block !important;
+        position: relative;
+        z-index: 1051;
+      }
 
-  .logo img {
-    height: 38px;
-  }
+      .logo img {
+        height: 38px;
+      }
 
-  .sub-dropdown > .dropdown-item::after {
-    content: " ▼";
-    right: 20px;
-  }
+      .sub-dropdown > .dropdown-item::after {
+        content: " ▼";
+        right: 20px;
+      }
 
-  .nav-container {
-    justify-content: space-between;
-  }
+      .nav-container {
+        justify-content: space-between;
+      }
 
-  .logo {
-    margin-right: 0;
-  }
+      .logo {
+        margin-right: 0;
+      }
 
-  .mobile-right .btn-signup {
-    padding: 6px 14px;
-    font-size: 0.85rem;
-  }
-}
-</style>
+      .mobile-right .btn-signup {
+        padding: 6px 14px;
+        font-size: 0.85rem;
+      }
+    }
+  </style>
 </head>
 <body>
 
@@ -429,7 +412,9 @@ body {
       <!-- Mobile -->
       <div class="mobile-right">
         <a href="https://hyloship.com/admin/login" class="btn-auth btn-signup">Sign Up</a>
-        <span class="hamburger" id="hamburger">☰</span>
+        <span class="hamburger" id="hamburger">
+          <i class="fas fa-bars"></i>
+        </span>
       </div>
     </div>
   </nav>
@@ -440,7 +425,15 @@ body {
 
     hamburger.addEventListener('click', () => {
       navMenu.classList.toggle('active');
-      hamburger.textContent = navMenu.classList.contains('active') ? '✕' : '☰';
+      
+      const icon = hamburger.querySelector('i');
+      if (navMenu.classList.contains('active')) {
+        icon.classList.remove('fa-bars');
+        icon.classList.add('fa-times');
+      } else {
+        icon.classList.remove('fa-times');
+        icon.classList.add('fa-bars');
+      }
     });
 
     // Mobile submenu toggle
@@ -460,25 +453,24 @@ body {
   </script>
 
   <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "HyloShip",
-  "url": "https://hyloship.com",
-  "logo": "https://hyloship.com/images/logo.png",
-  "sameAs": [
-    "https://www.facebook.com/hyloship",
-    "https://www.linkedin.com/company/hyloship",
-    "https://twitter.com/hyloship"
-  ],
-  "contactPoint": {
-    "@type": "ContactPoint",
-    "telephone": "+91-XXXXXXXXXX",  // add your real number
-    "contactType": "Customer Service"
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "HyloShip",
+    "url": "https://hyloship.com",
+    "logo": "https://hyloship.com/images/logo.png",
+    "sameAs": [
+      "https://www.facebook.com/hyloship",
+      "https://www.linkedin.com/company/hyloship",
+      "https://twitter.com/hyloship"
+    ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+91-XXXXXXXXXX",
+      "contactType": "Customer Service"
+    }
   }
-}
-</script>
-
+  </script>
 
 </body>
 </html>
