@@ -269,17 +269,19 @@
 
       .nav-menu {
         position: absolute;
-        top: 60px;                   /* ← 56px marquee + 70px navbar = 126px (main fix) */
+        top: 54px;
         left: 0;
         width: 100%;
         background: white;
         flex-direction: column;
-        box-shadow: 0 8px 20px rgba(255, 255, 255, 0.1);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
         align-items: flex-start;
         display: none;
-        padding-top: 30px;            /* ← Little breathing space at top of menu */
-        padding-bottom: 20px;         /* ← Space at bottom */
-      }
+        padding-top: 32px;
+        padding-bottom: 30px;
+    }
+
+
 
       .nav-menu.active {
         display: flex !important;
@@ -288,7 +290,7 @@
       .nav-menu .nav-item,
       .nav-menu .dropdown-item {
         padding: 18px 30px;           /* ← More comfortable spacing */
-        border-bottom: 1px solid #eee;
+        
         width: 100%;
         text-align: left;
         justify-content: flex-start;
